@@ -1,0 +1,447 @@
+<!DOCTYPE >
+<html >
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="Keywords" content="" />
+		<meta name="Description" content="" />
+		<title>用户中心_纳尔多钻戒官网</title>
+		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="icon" href="animated_favicon.gif" type="image/gif" />
+		<link rel="stylesheet" type="text/css" href="themes/lzmb/images/style.css" />
+		<script type="text/javascript" src="themes/lzmb/script/jquery.js"></script>
+		<script type="text/javascript" src="themes/lzmb/script/jquery_json.js"></script>
+		<link rel="stylesheet" type="text/css" href="themes/lzmb/style/user.css" />
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/user.js"></script>
+		<link type="text/css" rel="stylesheet" href="themes/lzmb/style/header.css">
+		<script type="text/javascript" src="themes/lzmb/script/header.js"></script>
+        <script>
+            $(function () {
+                $.ajax({
+                    type:"post",
+                    url:"/addressServlet?type=list",
+                    dataType:"json",
+                    success:function (data) {
+                        var json = eval(data);
+                       //alert(json)
+                        var address = json.address;
+                        $("#consignee_0").attr('value',address.consignee_name);
+                        $("#zipcode_0").attr('value',address.zip_code);
+                        $("#address_0").attr("value",address.address);
+                        $("#mobile_0").attr("value",address.consignee_phone);
+                    }
+                })
+            })
+        </script>
+	</head>
+	<body>
+		<script type="text/javascript" src="themes/lzmb/script/jquery.SuperSlide.2.1.1.js"></script>
+		<div class="topbg">
+			<div class="top clearfix">
+				<div class="member_info">
+					欢迎您
+					<font class="f4_b">drawworlf</font>,
+					<a href="userinfo.html">用户中心</a>|
+					<a href="">退出</a>
+				</div>
+				<div class="topr">
+					<div class="tel_400">400-8030-520</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_nav">
+			<div class="header clearfix">
+				<div class="header_logo clearfix">
+					<h1 class="hide"><a href="index.html" title="纳尔多">纳尔多</a></h1>
+					<div class="logo">
+						<a href="index.html">纳尔多</a>
+					</div>
+					<div class="top_qx">
+						<div class="top_hd">
+							<ul>
+								<li>
+									<a  target="_blank"><img src="images/lb01.jpg" /></a>
+								</li>
+								<li>
+									<a  target="_blank"><img src="images/lb02.jpg" /></a>
+								</li>
+							</ul>
+						</div>
+						<a class="top_prev" href="javascript:void(0)"></a>
+						<a class="top_next" href="javascript:void(0)"></a>
+					</div>
+				</div>
+			</div>
+			<div class="menu_bg">
+				<ul class="menu clearfix">
+					<li class="first">
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="allring.html">求婚钻戒</a>
+					</li>
+					<li>
+						<a href="pinkdiamond.html">高端粉钻</a>
+					</li>
+					<li>
+						<a href="freeservice.html">真爱服务</a>
+					</li>
+					<li>
+						<a href="lovenus.html">纳尔多式爱情</a>
+					</li>
+					<li>
+						<a href="culture.html">品牌文化</a>
+					</li>
+					<li>
+						<a href="Brandproject.html">品牌专题</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			if(jQuery.fn.jquery > '1.3.2') {
+				jQuery(document).ready(function() {
+					jQuery(".top_qx").slide({
+						mainCell: ".top_hd ul",
+						prevCell: ".top_prev",
+						nextCell: ".top_next",
+						effect: "left",
+						autoPlay: true
+					});
+					jQuery(".top_qx").mouseenter(function() {
+						jQuery(".top_prev").show();
+						jQuery(".top_next").show();
+					}).mouseleave(function() {
+						jQuery(".top_prev").hide();
+						jQuery(".top_next").hide();
+					});
+				});
+
+			}
+			jQuery(document).ready(function() {
+				$('.menu li').removeClass('on');
+				var cur_url = location.href;
+				var cur_path = location.pathname;
+				console.log(cur_url);
+				console.log(cur_url.indexOf('culture'));
+				if(cur_path == '/' || cur_url.indexOf('index') > -1) {
+					console.log('index');
+					$('.menu li').eq(0).addClass('on');
+				} else if(cur_url.indexOf('allring') > -1 || cur_url.indexOf('category') > -1) {
+					console.log('category');
+					$('.menu li').eq(1).addClass('on');
+				} else if(cur_url.indexOf('topic_id=12') > -1) {
+					console.log('brand topic');
+					$('.menu li').eq(2).addClass('on');
+				} else if(cur_url.indexOf('freeservice') > -1) {
+					console.log('freeservice');
+					$('.menu li').eq(3).addClass('on');
+				} else if(cur_url.indexOf('lovenus.html') > -1) {
+					console.log('lovenus');
+					$('.menu li').eq(4).addClass('on');
+				} else if(cur_url.indexOf('culture') > -1) {
+					console.log('culture');
+					$('.menu li').eq(5).addClass('on');
+				} else if(cur_url.indexOf('topic_id=29') > -1) {
+					console.log('brand topic');
+					$('.menu li').eq(6).addClass('on');
+				}
+			});
+		</script>
+		<div class="blank10"></div>
+		<div class="wrap white">
+			<div class="top_line"></div>
+			<div class="now">
+				您现在的位置：
+				<a href="/">首页</a> <code>&gt;</code> 用户中心
+			</div>
+			<div class="clear"></div>
+			<div id="userleft">
+
+				<div class="user-menu">
+
+					<dl>
+						<dt><strong>订单查询</strong></dt>
+						<dd class="first">
+							<a href="order_list.html">我的订单</a>
+						</dd>
+						<dd>
+							<a href="shopping_trolley.html">我的购物车</a>
+						</dd>
+						<dd>
+							<a href="user.php?act=comment_list">评论管理</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><strong>个人资料</strong></dt>
+						<dd>
+							<a href="user.php?act=test_email">验证邮箱</a>
+						</dd>
+						<dd>
+							<a href="userinfo.html">个人信息</a>
+						</dd>
+						<dd>
+							<a href="address_list.html">收货地址</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt><strong>预约留言</strong></dt>
+						<dd class="first">
+							<a href="bespoke.php">我要预约</a>
+						</dd>
+						<dd>
+							<a href="user.php?act=mylist">我的预约</a>
+						</dd>
+						<dd>
+							<a href="user.php?act=message_list">留言投诉</a>
+						</dd>
+					</dl>
+				</div>
+			</div>
+			<div id="userright">
+				<div class="cart_box">
+					<div class="my_2"><strong>收货人信息</strong> </div>
+					<div class="clear"></div>
+					<div class="cart_main">
+						<script type="text/javascript" src="js/utils.js"></script>
+						<script type="text/javascript" src="js/transport2.js"></script>
+						<script type="text/javascript" src="js/region.js"></script>
+						<script type="text/javascript" src="js/shopping_flow.js"></script>
+						<script type="text/javascript">
+							region.isAdmin = false;
+							var consignee_not_null = "收货人姓名不能为空！";
+							var country_not_null = "请您选择收货人所在国家！";
+							var province_not_null = "请您选择收货人所在省份！";
+							var city_not_null = "请您选择收货人所在城市！";
+							var district_not_null = "请您选择收货人所在区域！";
+							var invalid_email = "您输入的邮件地址不是一个合法的邮件地址。";
+							var address_not_null = "收货人的详细地址不能为空！";
+							var tele_not_null = "手机不能为空！";
+							var shipping_not_null = "请您选择配送方式！";
+							var payment_not_null = "请您选择支付方式！";
+							var goodsattr_style = "1";
+							var tele_invaild = "电话号码不有效的号码";
+							var zip_not_num = "邮政编码只能填写数字";
+							var mobile_invaild = "手机号码不是合法号码";
+							onload = function() {
+								if(!document.all) {
+									document.forms['theForm'].reset();
+								}
+							}
+						</script>
+						<form action="/addressServlet?type=update" method="post" name="theForm" onsubmit="return checkConsignee(this)">
+							<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#CDCDCD">
+								<tr>
+									<td align="right" bgcolor="#FFFFFF">收货人姓名：</td>
+									<td align="left" bgcolor="#FFFFFF"><input   name="consignee" type="text" class="inputBg" id="consignee_0" value="" /> (必填) </td>
+									<td align="right" bgcolor="#FFFFFF">电子邮件地址：</td>
+									<td align="left" bgcolor="#FFFFFF"><input  name="email" type="text" class="inputBg" id="email_0" value="" />
+									</td>
+								</tr>
+								<tr>
+									<td align="right" bgcolor="#FFFFFF">详细地址：</td>
+									<td align="left" bgcolor="#FFFFFF"><input  name="address" type="text" class="inputBg" id="address_0" value="" /> (必填)
+									</td>
+									<td align="right" bgcolor="#FFFFFF">邮政编码：</td>
+									<td align="left" bgcolor="#FFFFFF"><input  name="zipcode" type="text" class="inputBg" id="zipcode_0" value="" /></td>
+								</tr>
+								<tr>
+									<td align="right" bgcolor="#FFFFFF">手机：</td>
+									<td align="left" bgcolor="#FFFFFF"><input  name="mobile" type="text" class="inputBg" id="mobile_0" value="" /> (必填)
+									</td>
+									<td align="right" bgcolor="#FFFFFF">电话：</td>
+									<td align="left" bgcolor="#FFFFFF"><input name="tel" type="text" class="inputBg" id="tel_0" value="" />
+									</td>
+
+								</tr>
+								<tr>
+									<td align="right" bgcolor="#FFFFFF">标志建筑：</td>
+									<td align="left" bgcolor="#FFFFFF"><input name="sign_building" type="text" class="inputBg" id="sign_building_0" value="" /></td>
+									<td align="right" bgcolor="#FFFFFF">最佳送货时间：</td>
+									<td align="left" bgcolor="#FFFFFF"><input name="best_time" type="text" class="inputBg" id="best_time_0" value="" /></td>
+								</tr>
+								<tr>
+									<td align="right" bgcolor="#FFFFFF">&nbsp;</td>
+									<td colspan="3" align="center" bgcolor="#FFFFFF">
+										<input type="submit" name="submit" class="bnt_blue_1" value="确认修改" />
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="foot_bg">
+			<div class="services"></div>
+			<div class="index_wrap">
+				<div class="seaver">
+					<dl>
+						<dt>关于我们</dt>
+						<dd>
+							<a href="article_help-4.html" title="联系我们" target="_blank" rel="nofollow">联系我们</a>
+						</dd>
+						<dd>
+							<a href="article_help-5.html" title="诚聘贤才" target="_blank" rel="nofollow">诚聘贤才</a>
+						</dd>
+						<dd>
+							<a href="article_help-86.html" title="权威认证" target="_blank" rel="nofollow">权威认证</a>
+						</dd>
+						<dd>
+							<a href="article_help-14747.html" title="关于纳尔多" target="_blank" rel="nofollow">关于纳尔多</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>用户指南</dt>
+						<dd>
+							<a href="article_help-70.html" title="注册用户" target="_blank" rel="nofollow">注册用户</a>
+						</dd>
+						<dd>
+							<a href="article_help-82.html" title="会员权益" target="_blank" rel="nofollow">会员权益</a>
+						</dd>
+						<dd>
+							<a href="article_help-83.html" title="常见问题" target="_blank" rel="nofollow">常见问题</a>
+						</dd>
+
+					</dl>
+					<dl>
+						<dt>关于购买</dt>
+						<dd>
+							<a href="article_help-71.html" title="购买流程" target="_blank" rel="nofollow">购买流程</a>
+						</dd>
+						<dd>
+							<a href="article_help-72.html" title="支付方式" target="_blank" rel="nofollow">支付方式</a>
+						</dd>
+						<dd>
+							<a href="article_help-88.html" title="支付帮助" target="_blank" rel="nofollow">支付帮助</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt>关于配送</dt>
+						<dd>
+							<a href="article_help-77.html" title="配送方式" target="_blank" rel="nofollow">配送方式</a>
+						</dd>
+						<dd>
+							<a href="article_help-78.html" title="配送流程" target="_blank" rel="nofollow">配送流程</a>
+						</dd>
+						<dd>
+							<a href="article_help-79.html" title="配送问题" target="_blank" rel="nofollow">配送问题</a>
+						</dd>
+
+					</dl>
+					<dl>
+						<dt>售后服务</dt>
+						<dd>
+							<a href="article_help-73.html" title="退货流程" target="_blank" rel="nofollow">退货流程</a>
+						</dd>
+						<dd>
+							<a href="article_help-81.html" title="服务细则" target="_blank" rel="nofollow">服务细则</a>
+						</dd>
+						<dd>
+							<a href="article_help-113.html" title="售后保证" target="_blank" rel="nofollow">售后保证</a>
+						</dd>
+
+					</dl>
+					<dl>
+						<dt>客服中心</dt>
+						<dd>
+							<a href="article_help-84.html" title="订单查询" target="_blank" rel="nofollow">订单查询</a>
+						</dd>
+						<dd>
+							<a href="article_help-224.html" title="联系客服" target="_blank" rel="nofollow">联系客服</a>
+						</dd>
+						<dd>
+							<a href="article_help-225.html" title="建议留言" target="_blank" rel="nofollow">建议留言</a>
+						</dd>
+
+					</dl>
+
+				</div>
+
+				<div class="footer_bar">
+
+					<a href="article-1.html" rel="nofollow">鉴定机构</a>|
+					<a href="article_help-72.html" rel="nofollow">购买支付</a>|
+					<a href="article-226.html" rel="nofollow">收货指南</a>|
+					<a href="article_help-81.html" target="_blank" rel="nofollow">售后服务</a>|
+					<a href="user.php" target="_blank" rel="nofollow">会员中心</a>|
+					<a href="article-85.html" target="_blank" rel="nofollow">关于我们</a>|
+					<a href="article-4.html" target="_blank" rel="nofollow">联系我们</a>|
+					<a href="flinks.html" rel="nofollow">友情链接</a>|
+					<a href="article-221.html" rel="nofollow">申请合作</a>
+
+				</div>
+				<div class="copyright">
+					<p>每一枚纳尔多定制均需实名制：以我之名，冠你指间；一生相伴，一世相随！</p>
+					<p>Copyright 2012-2017 loveforvenus.com All Rights Reserved 深圳市纳尔多钻戒有限公司 版权所有 </p>
+					<p>经营许可证编号：
+						<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">粤ICP备12085622号-7</a> 全国咨询热线：400-8030-520 </p>
+					<p>中国互联网违法信息举报中心 | 中国公安网络110报警服务 | 本网站接受中国珠宝玉石首饰行业协会的监督 |
+						<a href="https://www.loveforvenus.com/article-222.html" target="_blank">网站地图</a>
+					</p>
+					<script>
+						var _hmt = _hmt || [];
+						(function() {
+							var hm = document.createElement("script");
+							hm.src = "//hm.baidu.com/hm.js?5dd4e9f0f9f64e70ce27e21fcf3b6dce";
+							var s = document.getElementsByTagName("script")[0];
+							s.parentNode.insertBefore(hm, s);
+						})();
+					</script>
+				</div>
+			</div>
+		</div>
+		<div class="float_div">
+			<div class="call_kefu">&nbsp;</div>
+			<ul>
+				<li>
+					<a href="/flow.php" target="_blank">&nbsp;</a>
+				</li>
+				<li>
+					<a href="/user.php" target="_blank">&nbsp;</a>
+				</li>
+				<li id="erweima">
+					<a href="javascript:void(0)">&nbsp;</a>
+				</li>
+				<li id="J_gotop">
+					<a href="javascript:void(0)">&nbsp;</a>
+				</li>
+			</ul>
+			<div class="zxerma"><img src="themes/lzmb/images/zxewm.jpg" /></div>
+		</div>
+		<div class="popup_float_div" style="display:none">
+			<div class="hide_popup_kefu"></div>
+			<div class="later_call_kefu">&nbsp;</div>
+			<div class="now_call_kefu">&nbsp;</div>
+
+		</div>
+
+		<script>
+			(function(a, h, c, b, f, g) {
+				a["UdeskApiObject"] = f;
+				a[f] = a[f] || function() {
+					(a[f].d = a[f].d || []).push(arguments)
+				};
+				g = h.createElement(c);
+				g.async = 1;
+				g.charset = "utf-8";
+				g.src = b;
+				c = h.getElementsByTagName(c)[0];
+				c.parentNode.insertBefore(g, c)
+			})(window, document, "script", "https://assets-cli.udesk.cn/im_client/js/udeskApi.js", "ud");
+			ud({
+				"targetSelector": ".now_call_kefu",
+				"selector": ".call_kefu",
+				"code": "22ebfaic",
+				"link": "https://lovenus.udesk.cn/im_client/?web_plugin_id=39048"
+			});
+		</script>
+	</body>
+	<script type="text/javascript">
+		var msg_title_empty = "留言标题为空";
+		var msg_content_empty = "留言内容为空";
+		var msg_title_limit = "留言标题不能超过200个字";
+	</script>
+
+</html>

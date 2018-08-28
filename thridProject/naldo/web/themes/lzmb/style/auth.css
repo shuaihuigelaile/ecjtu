@@ -1,0 +1,719 @@
+:focus {outline:none;} /*for IE*/ 
+::-moz-focus-inner {border-color: transparent;} /*for mozilla*/
+input:focus {outline:none;}
+.blank12 {
+    clear: both;
+    display: block;
+    height: 12px;
+    overflow: hidden;
+}
+.auth_main_quick a:link,.auth_main_quick a:visited{
+	color:#999999;
+	text-decoration:underline;
+}
+input{
+	color:#333333;
+	font-family:Arial, Helvetica, sans-serif;
+	}
+.user_box{background:url(../images/userbg.jpg)  no-repeat center center;height:720px;}
+.auth_main_login{width:379px;height:409px;float:right;overflow:hidden;background:url(../images/loginbg.png)  no-repeat;margin-top:150px;}
+.login_bor{ border:1px solid #d0d0d0;}
+.auth_tit_login{
+	text-align:left;
+	height:30px;
+	padding:0 0 0 15px;
+	margin:0 auto 1px auto;
+	font-family:"微软雅黑";
+	font-weight:bold;
+	color:#555555;
+	line-height:30px;
+	overflow:hidden;
+	border-bottom:1px solid #d0d0d0;
+	}
+.auth_main_login .user_main{
+	margin-top:124px;
+}
+
+.auth_main_login .user_main ul{
+	padding:0;
+	}
+.auth_main_login .user_main ul li{
+	list-style-position:outside;
+	padding-left:77px;
+	height:42px;
+	}
+.auth_main_login .user_main .infoWrong{
+	background:url('../images/info_wrong.jpg')  no-repeat scroll 410px 10px transparent;
+	}
+.auth_main_login .user_main .infoRight{
+	background:url('../images/info_right.jpg')  no-repeat scroll 410px 10px transparent;
+	}		
+.auth_main_login .user_main ul .tips{
+	margin:0 0 2px 118px;
+	_margin:0 0 2px 122px;
+	height:20px;
+	width:250px;
+	padding: 0 0 0 28px;
+	font-size:12px;
+	color:#666666;
+	line-height:20px;
+	overflow:hidden;
+}
+
+.auth_main_login .user_main ul .tips01{
+	background:url('../images/icon_tips1.jpg')  no-repeat scroll 4px 1px #ffe79d;
+}
+.auth_main_login .user_main ul .tips02{
+	background:url('../images/icon_tips2.jpg')  no-repeat scroll 4px 2px #f4bfbf;
+}
+.auth_main_login .user_main ul .aotologin{
+	margin:20px 0 2px 50px;
+	height:20px;
+	width:280px;
+	padding:0;
+	font-size:12px;
+	color:#666666;
+	line-height:16px;
+	overflow:hidden;
+}
+.auth_main_login .user_main ul .aotologin a{float:right;}
+
+a.reg_a{display:block;width:135px;height:33px;line-height:33px;border:1px solid #636b9e;color:#636b9e;text-align:center;font-size:14px;font-weight:bold;float:left;}
+.auth_main_login .user_main ul .submit{
+	margin:10px 0 2px 40px;
+	height:40px;
+	width:300px;
+	padding:0;
+	font-size:12px;
+	color:#666666;
+	line-height:40px;
+	overflow:hidden;
+	}	
+	
+.sub_btn{
+float: right;
+	font-size:14px;
+	color:#fff;
+	cursor:pointer;
+	background-color:#636b9e;
+	width:135px;height:35px;line-height:35px;
+}
+.auth_main_login .user_main ul input{
+	border:none;
+}		
+.auth_main_login .user_main .inputStyle01{
+	outline:none;
+	font-size:14px;
+    color: #333333;
+    height:40px;
+    line-height:40px;
+    width:255px;
+    text-align: left;
+	overflow:hidden;
+	background:transparent;
+	}
+	
+.auth_main_login .user_main .inputStyleTips{
+
+	}
+.auth_main_login .user_main .inputStyle01Hover{
+	outline:none;
+	font-size:14px;
+    color: #333333;
+	padding-left: 16px;
+    text-align: left;
+	overflow:hidden;
+	}
+.other_login{width:300px;margin:0 auto;padding-top:60px;text-align:center;}
+.other_login span{float:left;margin-top:2px;}
+.other_login a{margin-left:5px;}
+
+.login-item{position:absolute;width:300px;top:-30px;left:40px;}
+.login-item .cur{font-weight:bold;font-size:14px;}
+.normal-type{float:left;}
+.mobile-type{float:right;}
+#send_login_verify{position:absolute;right:40px; top:5px;width:100px; height:30px;background-color:#636b9e;border:0;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;color:#F2E1ED;cursor:pointer;display:none;}
+
+.auth_main{
+float:right;
+width:380px;
+height:500px;
+margin-top:100px;
+background:url(../images/user/regbg.png) no-repeat;
+}
+
+.auth_main .auth_tit{
+	text-align:left;
+	padding:0 0 0 15px;
+	margin:0px auto 1px auto;
+	font-family:"微软雅黑";
+	font-weight:bold;
+	color:#555555;
+	line-height:30px;
+	overflow:hidden;
+	border-bottom:1px solid #d0d0d0;
+	}
+
+.auth_main .loginBottom{}
+.auth_main .topTab{	width:300px;height:41px;overflow:hidden;margin:20px auto 0;}
+.auth_main .topTab1{background:url(../images/reg1.png) no-repeat;}
+.auth_main .forget_topTab{	}
+.auth_main .forget_topTab1{background:url('../images/forget2.png') no-repeat;}
+.auth_main .topTab li{width:145px;height:39px;line-height:39px;cursor:pointer;border:1px solid #636b9e; color:#636b9e;font-family:"微软雅黑";font-size:16px;}
+.auth_main .topTab ul li:first-child{float:left;background:url('../images/user/mob.png') no-repeat 10px center;text-indent:30px;}
+.auth_main .topTab ul li:last-child{float:right;background:url('../images/user/email.png') no-repeat  10px center;text-indent:40px;}
+
+.auth_main .topTab ul li.cur{background-color:#636b9e;color:#fff;}
+.auth_main .topTabNormal{
+	background:url('../images/authlogin_03.gif') no-repeat; width:110px; height:38px; text-align:center; line-height:38px; font-size:14px; color:#fff;cursor:pointer;
+}
+.auth_main .topTabAction{
+	background:url('../images/authlogin_05.gif') no-repeat; width:110px; height:38px; text-align:center; line-height:38px; font-size:14px; color:#987976; font-weight:bold; cursor:pointer;
+}
+.auth_main .loginContent{
+
+padding-bottom:20px;
+}
+.auth_main .loginContent ul{padding-left:40px;}
+.auth_main .loginContent li{
+	margin:0;
+	height:32px;
+	width:300px;
+	padding-top:8px;
+	border:1px solid #c8c7cd;
+	background-color:#f9f8fe;
+}
+.auth_main .loginContent li.none{border-top:0;}
+.auth_main .loginContent li div{	height:20px;}
+.auth_main .loginContent li h2{
+	width:80px;
+	float:left;
+	color:#999;
+	font-size:14px;	
+	font-weight:normal;
+	text-align:center;
+	line-height:25px;
+	_padding-top:6px;
+	border-right:1px solid #c8c7cd;
+}
+.auth_main .loginContent li p{
+	float:left;
+		
+	width:200px;
+}
+.auth_main .loginContent li h3{
+	float:left;
+	width:95px;
+}
+.auth_main .loginContent li h4{
+	width:100px;
+	position:absolute;
+	left:185px;
+	top:5px;
+}
+.auth_main .loginContent li h5{
+	font-weight:normal;
+	color:#999;
+	position:absolute;
+	right:8px;
+	top:12px;
+}
+.loginContent .agreement{padding:20px 0 20px;text-align:center;}
+.auth_main .loginContent .inputStyle01{
+	outline:none;
+	font-size:14px;
+	color:#333333;
+	width:200px; 
+	height:25px;  
+	line-height:26px;
+	border:0;
+	padding-left:10px;
+	background:transparent;
+}
+.auth_main .loginContent .inputStyle01Hover{
+	outline:none;
+	font-size:14px;
+	color:#333333;
+	width:200px; 
+	height:30px; 
+	padding:2px 0 0 5px; 
+	line-height:26px;
+	border:none;
+}
+.auth_main .loginContent .inputStyle02{
+	font-size:14px;
+	color:#333333;
+	width:90px; 
+	height:28px; 
+	padding:2px 0 0 5px; 
+	line-height:26px;
+	border:none;
+	background:transparent;
+}
+.auth_main .loginContent .inputStyle02Hover{
+	outline:none;
+	font-size:14px;
+	color:#333333;
+	width:110px; 
+	height:27px; 
+	padding:2px 0 0 5px; 
+	line-height:26px;
+}
+.auth_main .imgForm01{
+	border:solid 1px #c2c2c2;
+	text-align:center;
+	margin-top:3px;
+	padding:1px 0;
+}
+.auth_main .loginContent .button01{ 
+		background:#636b9e; 
+		width:226px;
+		height:37px;
+		line-height:37px;
+		text-align:center; 
+		font-size:14px; 
+		color:#FFF;
+		margin-left:80px;}
+.auth_main .button02{
+	margin-bottom:10px;
+	width:240px;
+}
+.auth_main .button02 h2{
+	color:#666;
+	font-size:12px;
+	font-weight:normal;
+	margin-bottom:10px;
+}
+.auth_main .button02 p{
+	background:url('../images/authlogin_13.gif') no-repeat;
+	width:94px;
+	height:24px;
+	text-align:center;
+	line-height:24px;
+}
+.auth_main .right .line01{ border-bottom:dashed 1px #FFF; padding:10px 0;}
+.auth_main .otherLogin{
+	margin-bottom:10px;
+	width:240px;
+	padding:20px 0 0 30px;
+}
+.auth_main .otherLogin p{
+	margin-bottom:10px;
+	color:#666666;
+}
+.auth_main .loginContent .tips01{
+	color:#987976;
+	background:url('../images/authlogin_43.gif') no-repeat;
+	width:248px;
+	height:22px;
+	line-height:22px;
+	padding-left:30px;
+	margin-left:120px;
+	float:left;
+}
+.auth_main .loginContent .tips02{
+	color:#987976;
+	background:url('../images/authlogin_44.gif') no-repeat;
+	width:248px;
+	height:22px;
+	line-height:22px;
+	padding-left:30px;
+	margin-left:100px;
+	float:left;
+}
+.auth_main .loginContent .tips03{
+	background:url('../images/authlogin2_10.gif') no-repeat;
+	width:116px;
+	height:20px;
+	font-size:12px;
+	color:#333333;
+	line-height:20px;
+	text-align:center;
+	margin-left:100px;
+	_margin-left:150px;
+	float:left;
+	border:none;
+	cursor:pointer;
+}
+*html .auth_main .loginContent .tips01{
+	color:#987976;
+	background:url('../images/authlogin_43.gif') no-repeat;
+	width:248px;
+	height:22px;
+	line-height:22px;
+	padding-left:30px;
+	margin-left:50px;
+	float:left;
+}
+*html .auth_main .loginContent .tips02{
+	color:#987976;
+	background:url('../images/authlogin_44.gif') no-repeat;
+	width:248px;
+	height:22px;
+	line-height:22px;
+	padding-left:30px;
+	margin-left:50px;
+	float:left;
+}
+*html .auth_main .loginContent .tips03{
+	background:url('../images/authlogin2_10.gif') no-repeat;
+	width:116px;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	margin-left:100px;
+	float:left;
+	border:none;
+	cursor:pointer;
+}
+.auth_main .loginContent li .emailChoice{
+	position:absolute;
+	background:#FFF;
+	z-index:100px;
+	height:auto;
+	width:273px;
+	height:180px;
+}
+.auth_main  .loginContent li .emailChoice .newemail{
+	width:260px;
+	height:18px;
+	line-height:18px;
+	margin-bottom:0;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#999;
+	padding:0 5px;
+	overflow:hidden;
+}
+.auth_main .emailChoiceAction{
+	background:#fbc9bf;
+}
+.auth_main .infoRight{
+	background:url('../images/info_right.jpg') no-repeat  right 10px ;
+}
+.auth_main .infoWrong{
+	background:url('../images/info_wrong.jpg') no-repeat  right 10px ;
+}	
+.auth_main_quick .infoRight{
+	background:url('../images/info_right.jpg') no-repeat  270px 10px ;
+}
+.auth_main_quick .infoWrong{
+	background:url('../images/info_wrong.jpg') no-repeat  270px 10px ;
+}
+.auth_main_quick{
+	width:350px;
+	background:#666;
+	padding:5px;
+	margin-top:20px;
+	text-align:left;
+}
+.auth_main_quick .block{
+	background:url('../images/authlogin_45.gif');
+	padding:10px;
+	width:330px;
+}
+.auth_main_quick .top{
+	width:330px;
+	margin-bottom:5px;
+}
+.auth_main_quick .top h2{
+	float:left;
+	font-weight:normal;
+	color:#666;
+}
+.auth_main_quick .top p{
+	float:right;
+}
+.auth_main_quick .topTab{
+	width:330px;
+}
+.auth_main_quick .topTab li{
+	width:100px;
+	float:left;
+	margin-right:2px;
+}
+.auth_main_quick .topTabNormal{
+	background:url('../images/authlogin2_05.gif') no-repeat; width:100px; height:28px; text-align:center; color:#fff; line-height:28px; font-size:14px;cursor:pointer;
+}
+.auth_main_quick .topTabAction{
+	background:url('../images/authlogin2_03.gif') no-repeat; width:100px; height:28px; text-align:center; line-height:28px; font-size:14px; color:#987976; font-weight:bold; cursor:pointer;
+}
+.auth_main_quick .loginContent{
+	background:#FFF;
+	width:290px;
+	padding:20px;
+	position:relative;
+}
+.auth_main_quick .loginContent .loginNav{
+	border-bottom:dashed 1px #999;
+	margin-bottom:15px;
+	padding-bottom:10px;
+}
+.auth_main_quick .loginContent .loginNav .red{
+	color:#F3776E;
+	}
+.auth_main_quick .loginContent .loginNav span{
+	cursor:pointer;
+}
+.auth_main_quick .loginContent .loginNav p{
+	display:inline;
+	padding:0 5px;
+}
+.auth_main_quick .loginContent .loginDetail{
+	width:290px;
+	overflow:hidden;
+}
+.auth_main_quick .loginContent .loginDetail li{
+	float:left;
+	width:290px;
+	overflow:hidden;
+}
+.auth_main_quick .loginContent .loginDetail li h2{
+	width:45px;
+	float:left;
+	color:#666;
+	font-weight:normal;
+	text-align:right;
+	line-height:30px;
+}
+.auth_main_quick .loginContent .loginDetail li p{
+	float:left;
+	padding-left:5px;	
+	width:230px;
+}
+.auth_main_quick .loginContent .loginDetail li h3{
+	float:left;
+	padding-left:5px;
+	width:75px;
+}
+.auth_main_quick .loginContent .loginDetail li h4{
+	float:left;
+	width:80px;
+	padding-left:5px;
+}
+.auth_main_quick .loginContent .loginDetail li h5{
+	line-height:31px;
+	font-weight:normal;
+	color:#999;
+}
+.auth_main_quick .inputStyleTips{
+	color:#333333;
+
+}
+
+.auth_main_quick .inputStyle01{
+	color:#333333;
+}
+
+.auth_main_quick .inputStyle01Hover{
+	color:#333333;
+	background:url('../images/input_bg1.jpg')  no-repeat scroll -4px -2px transparent;
+}
+.auth_main_quick .emailChoice{
+	position:absolute;
+	background:#FFF;
+	z-index:100px;
+	left: 70px;
+	top: 85px;
+	width:222px;
+}
+.auth_main_quick .emailChoice li{
+	width:212px;
+	line-height:18px;
+	margin-bottom:0;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#999;
+	padding:0 5px;
+}
+.auth_main_quick .emailChoiceAction{
+	background:#fbc9bf;
+}
+.auth_main_quick .imgForm01{
+	border:solid 1px #c2c2c2;
+	text-align:center;
+	margin-top:2px;
+	padding:0;
+}
+.auth_main_quick .loginContent .tips01{
+	background:url('../images/authlogin_43_2.gif') no-repeat;
+	width:188px;
+	height:22px;
+	line-height:22px;
+	padding-left:30px;
+	margin-left:50px;
+	float:left;
+}
+.auth_main_quick .loginContent .tips02{
+	background:url('../images/authlogin_44_2.gif') no-repeat;
+	width:188px;
+	height:22px;
+	line-height:22px;
+	padding-left:30px;
+	margin-left:50px;
+	float:left;
+}
+.auth_main_quick .loginContent .tips03{
+	background:url('../images/authlogin2_10.gif') no-repeat;
+	width:116px;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	margin-left:50px;
+	float:left;
+	color:#666;
+	border:none; cursor:pointer;
+}
+*html .auth_main_quick .loginContent .tips01{
+	background:url('../images/authlogin_43_2.gif') no-repeat;
+	width:188px;
+	height:22px;
+	line-height:22px;
+	padding-left:52px;
+	margin-left:25px;
+	float:left;
+}
+*html .auth_main_quick .loginContent .tips02{
+	background:url('../images/authlogin_44_2.gif') no-repeat;
+	width:188px;
+	height:22px;
+	line-height:22px;
+	padding-left:30px;
+	margin-left:25px;
+	float:left;
+}
+*html .auth_main_quick .loginContent .tips03{
+	background:url('../images/authlogin2_10.gif') no-repeat;
+	width:116px;
+	height:20px;
+	line-height:20px;
+	text-align:center;
+	margin-left:52px;
+	float:left;
+	color:#666;
+	border:none; cursor:pointer;
+}
+.auth_main_quick .liHeight{
+	margin:0 0 0 45px;
+	_margin-left:25px;
+	width:260px;
+	height:22px;
+	overflow:hidden;
+}
+.auth_main_quick .loginContent .button01{ 
+		background:url('../images/authlogin2_17.gif') no-repeat; 
+		width:142px;
+		height:24px;
+		line-height:24px;
+		text-align:center; 
+		color:#FFF;
+		margin-left:50px;
+		margin-bottom:5px;
+}
+.auth_main_quick .loginContent .button02{ 
+		background:url('../images/authlogin2_14.gif') no-repeat; 
+		width:53px;
+		height:24px;
+		line-height:24px;
+		text-align:center; 
+		color:#FFF;
+		margin-left:50px;
+		margin-bottom:5px;
+		float:left;
+}
+
+.auth_main_quick .notice{
+	margin-left:45px;
+	_margin-left:22px
+}
+*html .auth_main_quick .loginContent .button02{ 
+		background:url('../images/authlogin2_14.gif') no-repeat; 
+		width:53px;
+		height:24px;
+		line-height:24px;
+		text-align:center; 
+		color:#FFF;
+		margin-left:44px;
+		margin-bottom:5px;
+		float:left;
+}
+.auth_main_quick .loginContent .forgetpw{
+	float:left;
+	padding:7px 0 0 8px;
+}
+.auth_main_quick .loginContent .otherLogin{
+	border-top:dashed 1px #999;
+	padding-top:10px;
+	margin-top:10px;
+}
+.auth_main_quick .loginContent .loginCheckBox{
+	float:left;
+	padding-left:50px;
+	padding-bottom:10px;
+}
+.auth_main .loginContent .loginAuto, .auth_main_quick .loginContent .loginAuto{
+	float:left;
+	line-height:22px;
+	padding-left:5px;
+}
+.auth_main .loginContent .loginCheckBox{
+	float:left;
+	padding-left:100px;
+	padding-bottom:5px;
+}
+.auth_main .loginContent .button03{ 
+		background:url('../images/authlogin_47.gif') no-repeat; 
+		width:119px;
+		height:37px;
+		line-height:37px;
+		text-align:center; 
+		color:#FFF;
+		margin-left:100px;
+		margin-bottom:5px;
+		float:left;
+		font-size:14px;
+}
+*html .auth_main .loginContent .button03{ 
+		background:url('../images/authlogin_47.gif') no-repeat; 
+		width:119px;
+		height:37px;
+		line-height:37px;
+		text-align:center; 
+		color:#FFF;
+		margin-left:50px;
+		margin-bottom:5px;
+		float:left;
+		font-size:14px;
+}
+.auth_main .loginContent .forgetpw{
+	float:left;
+	padding:13px 0 0 8px;
+}
+.auth_main .loginContent .otherLogin2{
+	border-top:dashed 1px #999;
+	padding-top:10px;
+	margin-top:10px;
+}
+.span_txt{padding:4px 0 0 0; width:43px; margin:0px; float:left; line-height:30px; color:#666666}
+.auth_main_quick  .span_txt{width:35px;_width:26px; margin:0px; float:left; line-height:30px; color:#666666}
+.love_word{ color:#ae1321; font-weight:bold; margin-left:40px;}
+
+
+
+.succ_box{background:url('../images/user/sucbg.jpg') no-repeat center center;height:625px;position:relative; }
+.succ_con{ position:absolute;top:400px;width:100%;}
+.succ_1{text-align:center;color:#636b9e;font-family: "黑体";font-size: 24px;}
+.succ_2{text-align:center;line-height:20px;color:#555555;font-size:14px;padding-top:5px;}
+.succ_3{text-align:center;margin-top:40px;}
+.succ_3 a{display:inline-block;background-color:#636b9e;color:#ffffff;width:95px;margin-right:30px;padding:5px 0;font-family: "黑体";font-size: 14px;}
+
+.auth_main .get_pwd ul{padding-left:40px;}
+.auth_main .get_pwd li{width:270px;padding-left:30px;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;margin-bottom:20px;}
+.auth_main .get_pwd .li1{background:url('../images/user/t1.png') no-repeat 8px center;}
+.auth_main .get_pwd .li2{background:url('../images/user/t2.png') no-repeat 8px center;width:120px;position:relative;}
+.auth_main .get_pwd .li2 button{position:absolute;left:160px; top:0px;width:120px; height:40px;background-color:#636b9e;border:0;-moz-border-radius: 5px;-webkit-border-radius: 5px;border-radius:5px;color:#F2E1ED;cursor:pointer;}
+.auth_main .get_pwd .li3{background:url('../images/user/t3.png') no-repeat 8px center;}
+.auth_main .get_pwd .li4{background:url('../images/user/t4.png') no-repeat 8px center;}
+
+
+
+
+

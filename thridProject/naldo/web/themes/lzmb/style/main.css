@@ -1,0 +1,345 @@
+@charset "gb2312";
+/*
+ * 将具有默认margin和padding的标记置零
+ * @overlay *
+ * @desc	所有标记的margin、padding都在使用时具体定义
+ */
+*{margin:0;padding:0;}
+/*
+ * 修正IE5.x和IE6的斜体溢出bug
+ * @bugfix
+ * @css-for    IE 5.x/Win, IE6
+ */
+* html body{
+	overflow: visible;
+}
+* html iframe, * html frame{
+	overflow: auto;
+}
+* html frameset{
+	overflow: hidden;
+}
+.clearfix:after{
+content:"."; display:block; height:0; clear:both;
+visibility:hidden;
+}
+*html .clearfix{
+ height:1%;
+}
+*+html .clearfix{
+ height:1%;
+}
+/*英文强制换行*/
+.word{word-break:break-all;}
+/* @group 常用标签 */
+	/*
+	 * 基本标签默认样式取消
+	 * @overlay HTML标签
+	 * @desc 取消基本标签默认样式,防止不同浏览器显示效果不同
+	 * @Prop text-align:center; 解决不同浏览器剧中问题
+	 */
+	body{color:#000;background:#fff;font:12px/22px Verdana,Arial,sans-serif,"Times New Roman",宋体;text-align:center;}
+	body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,tr{margin:0;padding:0;}
+	input,select{font-size:12px;vertical-align:middle;}
+	
+	/*
+	 * 标签属性
+	 * @overlay textarea,input
+	 * @desc 强制输入时内容超出时换行
+	 */
+	textarea,input{	word-wrap:break-word;word-break:break-all;padding:0px;}
+	/*
+	 * 清除ul列表标记的样式
+	 * @overlay  li
+	 * @desc	ul列表更多的用在不需要列表前置符号的样式里
+	 */
+	li{list-style-type:none;}
+	/*
+	 * 定义图片边框
+	 * @overlay img
+	 * @desc	当图片作为链接内容被填充时，会有默认边框出现，重定义掉
+	 */
+	img{border:0 none;}
+	/*
+	 * 定义默认的链接样式
+	 * @overlay a
+	 * @desc	仅仅是作为默认样式提供，可以在各自的实例中覆盖掉
+	 */
+	a:link, a:visited{
+		text-decoration: none;
+	}
+	a:hover{
+		text-decoration: underline;
+	}
+	/*    去掉链接的虚线框     */
+	/*  	a {outline: none;  	a {star:expression(this.onFocus=this.blur()); */ 
+	
+	/*
+	 * 定义H系列标签
+	 * @overlay HN
+	 * @desc  覆盖H系列标签默认属性
+	 */
+	h1{ font-size:24px;}
+	h2{ font-size:20px;}
+	h3{ font-size:18px;}
+	h4{ font-size:16px;}
+	h5{ font-size:14px;}
+	h6{ font-size:12px;}
+	
+/* @end */
+
+
+/* @group 通用属性定义 */
+	/*  鼠标样式 */
+	.pointer{cursor:pointer;}
+	/* 取消边框 */
+	.NoBorder{border:0 none !important;}
+	.NoBackground{ background: none !important;}
+	/*  文本对齐方式  */
+	.t-l{text-align:left;}
+	.t-c{text-align:center;}
+	.t-r{text-align:right;}
+
+	/*
+	 * 字母和单词换行设置
+	 * @class Break 强制内容换行
+	 * @class Nobreak 强制内容不换行
+	 */
+	.Break{word-break:break-all;word-wrap:break-word;}
+	.Nobreak{word-break:keep-all;word-wrap:normal;}
+
+	/*     浮动定义   */
+	.FL{float:left;}
+	.FR{float:right;}
+	
+	/*  定义文本下划线  */
+	.UnLine{text-decoration:underline;}
+	.DisunLine{text-decoration:none;}
+	
+	/*    定位关系     */
+	.absolute{position:absolute;}
+	.relative{position:relative;}
+	
+	/*  居中对齐 */
+	.text-center{ text-align:center;}
+	
+/* @end */ 
+
+
+/* 通用容器 */
+.wrapper{
+	clear: both;
+	overflow: hidden;
+}
+
+/* @group 隐藏元素 */
+	
+	/*
+	 * 隐藏元素
+	 * @class o-hidden
+	 * @desc 当元素内容内容超出元素height 或 width 时，隐藏之
+	 */
+	.o-hidden{overflow:hidden;}
+	/*
+	 * 隐藏元素
+	 * @class invisible
+	 * @desc	visibility可以隐藏元素，但是还是会在布局中占位
+	 */
+	.invisible{
+		visibility:hidden;
+	}
+	
+	/*
+	 * 从页面布局上隐藏元素
+	 * @class hidden
+	 * @desc	从布局上隐藏元素
+	 */
+	.hidden{
+		display: none;
+	}
+	.block {display:block;}
+/* @end */
+
+/*
+ * 清理元素
+ * @class clear
+ * @desc	清理浮动元素,当浮动换行时后面元素不希望浮动，添加此属性，防止IE BUG
+ */
+ .clear{clear:both; height:0px; width:100%; font-size:1px; line-height:0px; visibility:hidden; overflow:hidden;}
+ 
+
+
+/*   常用样式定义  */
+	
+	/*
+	 * 边框定义
+	 * @Pro 由大写B开头,表示系统公用边框样式
+	 * @desc 常用样式可更具一个项目的样式使用频率重新定义,扩展
+	 */
+	.BTW{ border-top-width:1px;}
+	.BRW{ border-right-width:1px;}
+	.BLW{ border-left-width:1px;}
+	.BBW{ border:0px; border-bottom-width:1px;}
+	.Bord1{border:1px solid #BEBEBE;}
+	.Bord2{border:2px solid #BEBEBE;}
+	
+	/*  边框宽度  (BW开头)    */
+	.BW1{ border-width:1px;}
+	.BW2{ border-width:2px;}
+	.BW3{ border-width:3px;}
+	.BW4{ border-width:4px;}
+	.BW5{ border-width:5px;}
+	/*    边框样式 (Bs开头)    */
+	.BsS{ border-style:solid;}
+	.BsD{ border-style:dotted;}
+	/*    边框颜色  (Bc开头)   */
+	.BcBlue{ border-color: #0000FF;}
+	.BcBlack{ border-color: #000;}
+	/*   下划线   */
+	.BotLine{ border-bottom:1px solid #CFCFCF; overflow:hidden;}
+	/*.BotDotLine{ background: url(../image/dot01.gif) repeat-x left bottom;}*/
+	.BotDotLine01{ width:95%; margin:0 auto; background: url(../image/dot01.gif) repeat-x; height:1px; line-height:1px; overflow:hidden;}
+	/*.BotDasLine{ border-bottom:1px dashed #CFCFCF; overflow:hidden; height:1px; line-height:1px;}*/
+	/*.border-r-dot{ background:url(../image/dot02.gif) repeat-y right top;}*/
+
+	/*
+	 * 宽度定义
+	 * @Pro 由小写C开头,表示color
+	 * @desc 常用样式可更具一个项目的样式使用频率重新定义,扩展
+	 */
+	.W1024,.W786,.W975,.W972{width:968px;margin:0 auto;}
+	.W1024{width:1024px;}
+	.W786{width:786px;}
+	.W975{width:975px;}
+	.W972{width:972px;}
+	
+	/*
+	 * 颜色功能定义
+	 * @Pro 由小写C开头,表示color
+	 * @desc 常用样式可更具一个项目的样式使用频率重新定义,扩展
+	 */
+	.cRed{color: #E60000 !important;}
+	.cWhite{color: #FFF;}
+	.cGreen{color:#0F0;}
+	.cGray{color: #6E6E6E;}
+	.cBlue{ color: #00F;}
+	.cblack{ color:#000;}
+	/*  定义某个项目常用颜色  */
+	.c001{color:#663;}
+	.c555{color:#555555}
+	.c16{ color:#B16301 !important;}
+	
+	/*
+	 * 定义字体样式
+	 * @Pro 由大写字母F开头,表示FONT
+	 * @desc 常用样式可更具一个项目的样式使用频率重新定义,扩展
+	 */
+	
+	/*  字体样式 */
+	.FB{font-weight:bold;}
+	.FN{ font-weight:normal;}
+	.FI{font-style:italic;}
+	/*  字体大小  */
+	.F10{font-size:10px;}
+	.F11{font-size:11px;}
+	.F12{font-size:12px;}
+	.F13{font-size:13px;}
+	.F14{font-size:14px;}
+	.F16{font-size:16px;}
+	.F18{font-size:18px;}
+	
+	/*
+	 * 定义间距,上下2个DIV间距
+	 * @Pro 使用DIVH开头.
+	 * @desc 上下DIV有间距时使用,尽量不使用margin/padding值,防止不同浏览器出现BUG,
+	 *	     使用下面属性可兼容大多浏览器.
+	 */
+	.DivH5,.DivH10,.DivH15,.DivH20,.DivH25,.DivH30,DivH1,.DivH40{width:100%;overflow:hidden;}
+	.DivH1{ height:1px;}
+	.DivH5{height:5px;}
+	.DivH10{height:10px;}
+	.DivH15{height:15px;}
+	.DivH20{height:20px;}
+	.DivH25{height:25px;}
+	.DivH30{height:30px;}
+	.DivH40{height:40px;}
+	
+	/*
+	 * 定义行高
+	 * @class LH
+	 * @desc 使用较少,主要定义line-height属性
+	 */
+	.LH1{ line-height:1px;  }
+	.LH10{ line-height:10px; }
+	.LH15{ line-height:15px; }
+	.LH18{ line-height:18px; }
+	.LH20{ line-height:20px; }
+	.LH25{ line-height:25px;}
+	.LH30{ line-height:30px;}
+	.LH35{ line-height:35px;}
+	.LH42{ line-height:42px;}
+	
+	/*
+	 * 标题样式定义
+	 * @Pro PTit
+	 * @desc 在定义p标签元素或其它元素时,需要同时定义行高和高度,一般使用在标题显示中.
+	 */
+	
+	.PTit25,.PTit20,.PTit18,.PTit30,.PTit,.PTit1,.PTit22{	width:100%;	overflow:hidden;}
+	.PTit30{line-height:30px;height:30px;}
+	.PTit25{line-height:25px;height:25px;}
+	.PTit22{line-height:22px;height:22px;}
+	.PTit20{line-height:20px;height:20px;}
+	.PTit18{line-height:18px;height:18px;}
+	.PTit15{line-height:15px;height:15px;}
+	.PTit10{line-height:10px;height:10px;}
+	.PTit1{line-height:1px;height:1px;}
+	
+	/*
+	 * MORE更多样式设计
+	 * @Pro MORE
+	 * @desc 显示在右侧更多/MORE样式,可根据需求扩展
+	 */
+		
+	.More{text-align:right;position:absolute; top:0; right:3px;}
+	.MoreR5{ position:absolute; top:0px; right:3px; font:12px normal; }
+	.MoreR15{ position:absolute; top:0px; right:15px; font:12px normal;}
+	
+	/*
+	 * 普通列表样式定义
+	 * @desc 文章列表样
+	 * @use  一般列表使用,ul li列表
+	 */
+	.ArtList,.ArtList25,.ArtList22,.ArtList24{ width:100%; overflow:hidden; margin:0 auto;}
+	.ArtList li{ width:100%; height:20px; line-height:20px; overflow:hidden;}
+	.ArtList25 li{ width:100%; height:25px; line-height:25px; overflow:hidden;}
+	.ArtList24 li{ width:100%; height:24px; line-height:24px; overflow:hidden;}
+	.ArtList22 li{ width:100%; height:22px; line-height:22px; overflow:hidden;}
+
+/* @end  */
+
+
+
+/*  备注  */
+/*在终极页面中调用该通用样式时,应该注意显示效果的不同,因为后台上传信息时编辑器里面样式并没有调用本默认样式表.
+ *
+ *所以在编辑器中标签会有默认的属性,用户在添加信息时,这些信息都是附带默认样式的.
+ *如果用我们在终极页面也调用本默认CSS文件的话,许多标签如:p,td,li......标签默认样式都被取消,因此显示效不同.
+ *
+ *解决办法:
+ *	在终极页面显示内容区域还原这些标签的默认属性.
+ *
+ */
+ 
+ /*
+ ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,tr{ margin:auto; padding:inherit;}
+ input,select{ font-size:inherit;}
+ img{border: inherit;}
+ ul,li{margin:auto; padding:inherit;}
+ li{
+	list-style-type:disc;
+ }
+*/
+ 
+#keyword{width:100px;}
+.index_search_select{width:104px;}

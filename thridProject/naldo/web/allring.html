@@ -1,0 +1,506 @@
+﻿<!DOCTYPE html >
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gbk" />
+		<title>纳尔多钻戒价格_求婚钻戒定制_钻石戒指图片款式-纳尔多官网</title>
+		<meta name="Keywords" content="钻戒价格,求婚钻戒,钻戒定制,戒指图片" />
+		<meta name="Description" content="纳尔多,实名制戒指，求婚钻戒的第一品牌.全方位了解纳尔多钻戒价格以及求婚戒指款式图片,进入纳尔多官网即可订制正品求婚戒指." />
+		<link href="themes/lzmb/style/main.css" rel="stylesheet" type="text/css" />
+		<link href="themes/lzmb/style/category.css" rel="stylesheet" type="text/css" />
+		<link href="themes/lzmb/style/dz.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="themes/lzmb/script/jquery1.9.1.min.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<link type="text/css" rel="stylesheet" href="themes/lzmb/style/header.css">
+		<script type="text/javascript" src="themes/lzmb/script/header.js"></script>
+		<script type="text/javascript" src="themes/lzmb/script/layer/layer.js"></script>
+		<script type="text/javascript" src="themes/lzmb/script/love_search.js"></script>
+		<script type="text/javascript">
+            $(function () {
+                $.ajax({
+                    type:"post",
+                    url:"/commodityServlet?type=listAll",
+                    dataType:"json",
+                    success:function (data) {
+                        var json = eval(data);
+                        var result = json.result;
+                        var rs = "";
+                        $.each(result,function (index,commodity) {
+                            var Commodityname = commodity.type_name+"-"+commodity.name;
+                            var path = "upload/"+commodity.imgPath;
+                            var url = "goods.html?type=query&id="+commodity.commodityinfo_id;
+                            rs +='<li><div class="img">' +
+                                '<a  target="_blank"><img src="'+path+'" alt="'+Commodityname+'" /></a>' +
+                                '</div><div class="name">' +
+                                '<label> <a href="'+url+'" title="'+Commodityname+'" target="_blank">'+Commodityname+'</a></label>' +
+                                '</div><div class="price">￥'+commodity.price+'元</div></li>';
+                        });
+                        $("#clearfix").empty();
+                        $("#clearfix").append(rs);
+                    }
+                })
+            })
+        </script>
+	</head>
+	<body>
+		<script type="text/javascript" src="themes/lzmb/script/jquery.SuperSlide.2.1.1.js"></script>
+		<script type="text/javascript">
+			var process_request = "正在处理您的请求...";
+		</script>
+		<div class="topbg">
+			<div class="top clearfix">
+				<div class="member_info">
+					<div class="top_login">
+						<ul>
+							<li>
+								<a href="login.html" title="登录">登录</a>|
+								<a href="register.html" title="注册">注册</a>|</li>
+						</ul>
+					</div>
+				</div>
+				<div class="topr">
+					<div class="tel_400">400-8030-520</div>
+				</div>
+			</div>
+		</div>
+		<div class="header_nav">
+			<div class="header clearfix">
+				<div class="header_logo clearfix">
+					<h1 class="hide"><a href="index.html" title="纳尔多">纳尔多</a></h1>
+					<div class="logo">
+						<a href="index.html">纳尔多</a>
+					</div>
+					<div class="top_qx">
+						<div class="top_hd">
+							<ul>
+								<li>
+									<a target="_blank"><img src="images/lb01.jpg" /></a>
+								</li>
+								<li>
+									<a  target="_blank"><img src="images/lb02.jpg" /></a>
+								</li>
+							</ul>
+						</div>
+						<a class="top_prev" href="javascript:void(0)"></a>
+						<a class="top_next" href="javascript:void(0)"></a>
+					</div>
+				</div>
+			</div>
+			<div class="menu_bg">
+				<ul class="menu clearfix">
+					<li class="first">
+						<a href="index.html">首页</a>
+					</li>
+					<li>
+						<a href="allring.html">求婚钻戒</a>
+					</li>
+					<li>
+						<a href="pinkdiamond.html">高端粉钻</a>
+					</li>
+					<li>
+						<a href="freeservice.html">真爱服务</a>
+					</li>
+					<li>
+						<a href="lovenus.html">纳尔多式爱情</a>
+					</li>
+					<li>
+						<a href="culture.html">品牌文化</a>
+					</li>
+					<li>
+						<a href="Brandproject.html">品牌专题</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script type="text/javascript">
+			if(jQuery.fn.jquery > '1.3.2') {
+				jQuery(document).ready(function() {
+					jQuery(".top_qx").slide({
+						mainCell: ".top_hd ul",
+						prevCell: ".top_prev",
+						nextCell: ".top_next",
+						effect: "left",
+						autoPlay: true
+					});
+					jQuery(".top_qx").mouseenter(function() {
+						jQuery(".top_prev").show();
+						jQuery(".top_next").show();
+					}).mouseleave(function() {
+						jQuery(".top_prev").hide();
+						jQuery(".top_next").hide();
+					});
+				});
+			}
+			jQuery(document).ready(function() {
+				$('.menu li').removeClass('on');
+				var cur_url = location.href;
+				var cur_path = location.pathname;
+				console.log(cur_url);
+				console.log(cur_url.indexOf('culture'));
+				if(cur_path == '/' || cur_url.indexOf('index') > -1) {
+					console.log('index');
+					$('.menu li').eq(0).addClass('on');
+				} else if(cur_url.indexOf('allring') > -1 || cur_url.indexOf('category') > -1) {
+					console.log('category');
+					$('.menu li').eq(1).addClass('on');
+				} else if(cur_url.indexOf('topic_id=12') > -1) {
+					console.log('brand topic');
+					$('.menu li').eq(2).addClass('on');
+				} else if(cur_url.indexOf('freeservice') > -1) {
+					console.log('freeservice');
+					$('.menu li').eq(3).addClass('on');
+				} else if(cur_url.indexOf('lovenus.html') > -1) {
+					console.log('lovenus');
+					$('.menu li').eq(4).addClass('on');
+				} else if(cur_url.indexOf('culture') > -1) {
+					console.log('culture');
+					$('.menu li').eq(5).addClass('on');
+				} else if(cur_url.indexOf('topic_id=29') > -1) {
+					console.log('brand topic');
+					$('.menu li').eq(6).addClass('on');
+				}
+			});
+		</script>
+		<style type="text/css">
+			.slideBox {
+				width: 100%;
+				max-width: 1419px;
+				margin: 0 auto;
+				overflow: hidden;
+				position: relative;
+			}
+			
+			.slideBox .hds {
+				height: 15px;
+				overflow: hidden;
+				position: absolute;
+				right: 47%;
+				bottom: 30px;
+				z-index: 1;
+			}
+			
+			.slideBox .hds ul {
+				overflow: hidden;
+				zoom: 1;
+				float: left;
+			}
+			
+			.slideBox .hds ul li {
+				float: left;
+				margin-right: 10px;
+				width: 15px;
+				height: 15px;
+				line-height: 14px;
+				text-align: center;
+				background: #b5b5b5;
+				cursor: pointer;
+				-moz-border-radius: 45px;
+				-webkit-border-radius: 45px;
+				border-radius: 45px;
+			}
+			
+			.slideBox .hds ul li.on {
+				background: #dfbfd1;
+			}
+			
+			.slideBox .bd2 {
+				position: relative;
+				height: 100%;
+				z-index: 0;
+			}
+			
+			.slideBox .bd2 li {
+				zoom: 1;
+				vertical-align: middle;
+			}
+			
+			.slideBox .bd2 img {
+				width: 100%;
+				max-width: 1419px;
+				height: auto;
+				display: block;
+			}
+			
+			.slideBox .prev {
+				width: 45px;
+				height: 70px;
+				margin-left: -527px;
+				position: absolute;
+				top: 280px;
+				left: 50%;
+				display: none;
+				background: url('images/slide_prev.png') no-repeat left top;
+				z-index: 2;
+			}
+			
+			.slideBox .prev:hover {
+				background: url('images/slide_prev.png') no-repeat right top;
+			}
+			
+			.slideBox .next {
+				width: 45px;
+				height: 70px;
+				margin-left: 482px;
+				position: absolute;
+				top: 280px;
+				left: 50%;
+				display: none;
+				background: url('images/slide_next.png') no-repeat left top;
+				z-index: 2;
+			}
+			
+			.slideBox .next:hover {
+				background: url('images/slide_next.png') no-repeat right top;
+			}
+		</style>
+		<script type="text/javascript" src="themes/lzmb/script/jquery.SuperSlide.2.1.1.js"></script>
+		<div class="slideBox">
+			<div class="hds">
+				<ul>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<div class="bd2">
+				<ul>
+					<li>
+						<a href="ring/ring.html" target="_blank"><img src="themes/lzmb/images/category_2_1.jpg" class="img-responsive" /></a>
+					</li>
+					<li>
+						<a  target="_blank"><img src="themes/lzmb/images/category_2_2.jpg" class="img-responsive" /></a>
+					</li>
+					<li>
+						<a  target="_blank"><img src="themes/lzmb/images/category_2_3.jpg" class="img-responsive" /></a>
+					</li>
+				</ul>
+			</div>
+			<a class="prev" href="javascript:void(0)"></a>
+			<a class="next" href="javascript:void(0)"></a>
+		</div>
+		<script type="text/javascript">
+			jQuery(".slideBox").slide({
+				titCell: ".hds ul li",
+				mainCell: ".bd2 ul",
+				effect: "left",
+				autoPlay: true
+			});
+			jQuery(".slideBox").mouseenter(function() {
+				jQuery(".slideBox .prev").show();
+				jQuery(".slideBox .next").show();
+			}).mouseleave(function() {
+				jQuery(".slideBox .prev").hide();
+				jQuery(".slideBox .next").hide();
+			});
+		</script>
+		<div class="block">
+			<dl>
+				<dd class="crumb_nav">
+					您现在的位置：
+					<a href="index.html">首页</a> <code>&gt;</code>
+					<a >乐订制</a>
+				</dd>
+			</dl>
+			<div class="dia_list clearfix">
+				<ul class="clearfix" id="clearfix">
+					<li>
+						<div class="img">
+							<a  target="_blank"><img src="images/201805/goods_img/1016573_G_1527304114312.jpg" alt="爱的交响-珍稀豪华粉钻戒指 女戒 钻戒" /></a>
+						</div>
+						<div class="name">
+							<label> <a href="goods-1016573.html" title="爱的交响-珍稀豪华粉钻戒指 女戒 钻戒" target="_blank">爱的交响-珍稀豪华粉钻戒指 女戒...</a></label>
+						</div>
+						<div class="price">￥36899元</div>
+					</li>
+				</ul>
+			</div>
+			<div class="dz_pages">
+				<div class="dz_pages_turn clearfix">
+					<a href="category-2-b0-min0-max0-attr0-1-sell_num-DESC.html" title="上一页"><img src="themes/lzmb/images/larrow.png" class="FL" /></a>
+					<form name="selectPageForm" action="/category.php" method="get">
+						<input type="hidden" name="id" value="2" />
+						<input type="hidden" name="sort" value="" />
+						<input type="hidden" name="order" value="" />
+						<span class="dz_page"><label>第</label><input id="page_input" class="inp" type="text" value="" name="page" />
+	<img src="themes/lzmb/images/gopage.jpg" class="FL pointer" onclick="selectPage(document.getElementById('page_input'))" /><label>页</label></span><span class="dz_total_page">共6页</span>
+					</form>
+					<a href="category-2-b0-min0-max0-attr0-2-sell_num-DESC.html" title="下一页"><img class="FR" src="themes/lzmb/images/rarrow.png" /></a>
+				</div>
+			</div>
+		</div>
+		<div class="foot_bg">
+			<div class="services"></div>
+			<div class="index_wrap">
+
+				<div class="seaver">
+
+					<dl>
+						<dt>关于我们</dt>
+						<dd>
+							<a href="article_help-4.html" title="联系我们" target="_blank" rel="nofollow">联系我们</a>
+						</dd>
+						<dd>
+							<a href="article_help-5.html" title="诚聘贤才" target="_blank" rel="nofollow">诚聘贤才</a>
+						</dd>
+						<dd>
+							<a href="article_help-86.html" title="权威认证" target="_blank" rel="nofollow">权威认证</a>
+						</dd>
+						<dd>
+							<a href="article_help-14747.html" title="关于纳尔多" target="_blank" rel="nofollow">关于纳尔多</a>
+						</dd>
+
+					</dl>
+					<dl>
+						<dt>用户指南</dt>
+						<dd>
+							<a href="article_help-70.html" title="注册用户" target="_blank" rel="nofollow">注册用户</a>
+						</dd>
+						<dd>
+							<a href="article_help-82.html" title="会员权益" target="_blank" rel="nofollow">会员权益</a>
+						</dd>
+						<dd>
+							<a href="article_help-83.html" title="常见问题" target="_blank" rel="nofollow">常见问题</a>
+						</dd>
+
+					</dl>
+					<dl>
+						<dt>关于购买</dt>
+						<dd>
+							<a href="article_help-71.html" title="购买流程" target="_blank" rel="nofollow">购买流程</a>
+						</dd>
+						<dd>
+							<a href="article_help-72.html" title="支付方式" target="_blank" rel="nofollow">支付方式</a>
+						</dd>
+						<dd>
+							<a href="article_help-88.html" title="支付帮助" target="_blank" rel="nofollow">支付帮助</a>
+						</dd>
+
+					</dl>
+					<dl>
+						<dt>关于配送</dt>
+						<dd>
+							<a href="article_help-77.html" title="配送方式" target="_blank" rel="nofollow">配送方式</a>
+						</dd>
+						<dd>
+							<a href="article_help-78.html" title="配送流程" target="_blank" rel="nofollow">配送流程</a>
+						</dd>
+						<dd>
+							<a href="article_help-79.html" title="配送问题" target="_blank" rel="nofollow">配送问题</a>
+						</dd>
+
+					</dl>
+					<dl>
+						<dt>售后服务</dt>
+						<dd>
+							<a href="article_help-73.html" title="退货流程" target="_blank" rel="nofollow">退货流程</a>
+						</dd>
+						<dd>
+							<a href="article_help-81.html" title="服务细则" target="_blank" rel="nofollow">服务细则</a>
+						</dd>
+						<dd>
+							<a href="article_help-113.html" title="售后保证" target="_blank" rel="nofollow">售后保证</a>
+						</dd>
+
+					</dl>
+					<dl>
+						<dt>客服中心</dt>
+						<dd>
+							<a href="article_help-84.html" title="订单查询" target="_blank" rel="nofollow">订单查询</a>
+						</dd>
+						<dd>
+							<a href="article_help-224.html" title="联系客服" target="_blank" rel="nofollow">联系客服</a>
+						</dd>
+						<dd>
+							<a href="article_help-225.html" title="建议留言" target="_blank" rel="nofollow">建议留言</a>
+						</dd>
+
+					</dl>
+
+				</div>
+
+				<div class="footer_bar">
+
+					<a href="article-1.html" rel="nofollow">鉴定机构</a>|
+					<a href="article_help-72.html" rel="nofollow">购买支付</a>|
+					<a href="article-226.html" rel="nofollow">收货指南</a>|
+					<a href="article_help-81.html" target="_blank" rel="nofollow">售后服务</a>|
+					<a href="user.php.html" target="_blank" rel="nofollow">会员中心</a>|
+					<a href="article-85.html" target="_blank" rel="nofollow">关于我们</a>|
+					<a href="article-4.html" target="_blank" rel="nofollow">联系我们</a>|
+					<a href="flinks.html" rel="nofollow">友情链接</a>|
+					<a href="article-221.html" rel="nofollow">申请合作</a>
+
+				</div>
+				<div class="copyright">
+					<p>每一枚纳尔多定制均需实名制：以我之名，冠你指间；一生相伴，一世相随！</p>
+					<p>Copyright 2012-2017 loveforvenus.com All Rights Reserved 深圳市纳尔多钻戒有限公司 版权所有 </p>
+					<p>经营许可证编号：
+						<a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">粤ICP备12085622号-7</a> 全国咨询热线：400-8030-520 </p>
+					<p>中国互联网违法信息举报中心 | 中国公安网络110报警服务 | 本网站接受中国珠宝玉石首饰行业协会的监督 |
+						<a href="article-222.html" target="_blank">网站地图</a>
+					</p>
+					<script>
+						var _hmt = _hmt || [];
+						(function() {
+							var hm = document.createElement("script");
+							hm.src = "//hm.baidu.com/hm.js?5dd4e9f0f9f64e70ce27e21fcf3b6dce";
+							var s = document.getElementsByTagName("script")[0];
+							s.parentNode.insertBefore(hm, s);
+						})();
+					</script>
+				</div>
+			</div>
+		</div>
+		<div class="float_div">
+			<div class="call_kefu">&nbsp;</div>
+			<ul>
+				<li>
+					<a href="flow.php.html" target="_blank">&nbsp;</a>
+				</li>
+				<li>
+					<a href="user.php.html" target="_blank">&nbsp;</a>
+				</li>
+				<li id="erweima">
+					<a href="javascript:void(0)">&nbsp;</a>
+				</li>
+				<li id="J_gotop">
+					<a href="javascript:void(0)">&nbsp;</a>
+				</li>
+			</ul>
+			<div class="zxerma"><img src="themes/lzmb/images/zxewm.jpg" /></div>
+		</div>
+		<div class="popup_float_div" style="display:none">
+			<div class="hide_popup_kefu"></div>
+			<div class="later_call_kefu">&nbsp;</div>
+			<div class="now_call_kefu">&nbsp;</div>
+		</div>
+		<script>
+			(function(a, h, c, b, f, g) {
+				a["UdeskApiObject"] = f;
+				a[f] = a[f] || function() {
+					(a[f].d = a[f].d || []).push(arguments)
+				};
+				g = h.createElement(c);
+				g.async = 1;
+				g.charset = "utf-8";
+				g.src = b;
+				c = h.getElementsByTagName(c)[0];
+				c.parentNode.insertBefore(g, c)
+			})(window, document, "script", "https://assets-cli.udesk.cn/im_client/js/udeskApi.js", "ud");
+			ud({
+				"targetSelector": ".now_call_kefu",
+				"selector": ".call_kefu",
+				"code": "22ebfaic",
+				"link": "https://lovenus.udesk.cn/im_client/?web_plugin_id=39048"
+			});
+		</script>
+		<script type="Text/Javascript" language="JavaScript">
+			<!--
+function selectPage(sel)
+{
+  sel.form.submit();
+}
+//-->
+		</script>
+	</body>
+
+</html>

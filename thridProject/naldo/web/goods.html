@@ -1,0 +1,745 @@
+<!DOCTYPE html >
+<html >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>纳尔多钻戒官网</title>
+    <meta name="Keywords" content="18K白金 PT950" />
+    <meta name="Description" content="定制需要25-30个工作日" />
+    <link href="themes/lzmb/images/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="themes/lzmb/script/jquery.js"></script>
+    <script type="text/javascript" src="themes/lzmb/script/jscroll.js"></script>
+    <script type="text/javascript" src="themes/lzmb/script/jquery_json.js"></script>
+    <script src="themes/lzmb/script/main.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/list_table.js"></script>
+    <script type="text/javascript" src="js/transport2.js"></script>
+    <script type="text/javascript" src="js/jquery.jqzoom.js"></script>
+    <script type="text/javascript" src="js/lefttime.js"></script>
+    <link type="text/css" rel="stylesheet" href="themes/lzmb/style/header.css">
+    <script type="text/javascript" src="themes/lzmb/script/header.js"></script>
+    <link type="text/css" rel="stylesheet" href="themes/lzmb/style/goods.css">
+    <script type="text/javascript" src="themes/lzmb/script/images.js"></script>
+    <script type="text/javascript">
+        function getRequest() {
+            var url = location.search;
+            return url;
+        }
+        Date.prototype.Format = function (fmt) { //author: meizz
+            var o = {
+                "M+": this.getMonth() + 1, //月份
+                "d+": this.getDate(), //日
+                "h+": this.getHours(), //小时
+                "m+": this.getMinutes(), //分
+                "s+": this.getSeconds(), //秒
+                "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+                "S": this.getMilliseconds() //毫秒
+            };
+            if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+            for (var k in o)
+                if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+            return fmt;
+        }
+        $(function () {
+            var url = "/commodityServlet"+getRequest();
+            $.ajax({
+                type:"post",
+                url:url,
+                dataType:"json",
+                success:function (data) {
+                    var json = eval(data);
+                    var result = json.result;
+                    var comments = json.comments;
+                    var path = "url(upload/"+result.imgPath+")";
+                    $("#Comimage").css("background",path);
+                    $("#Comname").text(result.type_name+"-"+result.name);
+                    $("#salePrice").text(result.price);
+                    $("#Comweight").text(result.weight);
+                    $("#Comclarity").text(result.clarity);
+                    $('#Comcolor').text(result.color);
+                    $("#Comcut").text(result.cut);
+                    $("#texut").text(result.texture);
+                    $('#addCart').attr("href","/trolley?id="+result.commodityinfo_id);
+                    $('#cmt_type').attr("value",result.commodityinfo_id);
+                    var rs = "";
+                    $.each(comments,function (index,comment) {
+                        //alert(new Date(comment.comments_time).getFullYear())
+                        rs +='<ul class="comments"><li class="word">' +
+                            '<font class="f2">匿名用户</font>' +
+                            '<font class="f3">( '+new Date(comment.comments_time.time).Format("yyyy-MM-dd hh:mm:ss")+' )</font><br />' +
+                            '<p>'+comment.comment_content+'</p></li></ul>'
+                    })
+                    $("#comments").append(rs);
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<input type="hidden" id="lz_id" value="0" />
+<script type="text/javascript" src="themes/lzmb/script/jquery.SuperSlide.2.1.1.js"></script>
+<div class="topbg">
+    <div class="top clearfix">
+        <div class="member_info">
+            <div class="top_login">
+                <ul>
+                    <li>
+                        <a href="login.html" title="登录">登录</a>|
+                        <a href="register.html" title="注册">注册</a>|</li>
+                </ul>
+            </div>
+        </div>
+        <div class="topr">
+            <div class="tel_400">400-8030-520</div>
+        </div>
+    </div>
+</div>
+<div class="header_nav">
+    <div class="header clearfix">
+        <div class="header_logo clearfix">
+            <h1 class="hide"><a href="index.html" title="纳尔多">纳尔多</a></h1>
+            <div class="logo">
+                <a href="index.html">纳尔多</a>
+            </div>
+            <div class="top_qx">
+                <div class="top_hd">
+                    <ul>
+                        <li>
+                            <a  target="_blank"><img src="images/lb01.jpg" /></a>
+                        </li>
+                        <li>
+                            <a  target="_blank"><img src="images/lb02.jpg" /></a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="top_prev" href="javascript:void(0)"></a>
+                <a class="top_next" href="javascript:void(0)"></a>
+            </div>
+        </div>
+    </div>
+    <div class="menu_bg">
+        <ul class="menu clearfix">
+            <li class="first">
+                <a href="index.html">首页</a>
+            </li>
+            <li>
+                <a href="allring.html">求婚钻戒</a>
+            </li>
+            <li>
+                <a href="pinkdiamond.html">高端粉钻</a>
+            </li>
+            <li>
+                <a href="freeservice.html">真爱服务</a>
+            </li>
+            <li>
+                <a href="lovenus.html">纳尔多式爱情</a>
+            </li>
+            <li>
+                <a href="culture.html">品牌文化</a>
+            </li>
+            <li>
+                <a href="Brandproject.html">品牌专题</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+    if(jQuery.fn.jquery > '1.3.2') {
+        jQuery(document).ready(function() {
+            jQuery(".top_qx").slide({
+                mainCell: ".top_hd ul",
+                prevCell: ".top_prev",
+                nextCell: ".top_next",
+                effect: "left",
+                autoPlay: true
+            });
+            jQuery(".top_qx").mouseenter(function() {
+                jQuery(".top_prev").show();
+                jQuery(".top_next").show();
+            }).mouseleave(function() {
+                jQuery(".top_prev").hide();
+                jQuery(".top_next").hide();
+            });
+        });
+    }
+    jQuery(document).ready(function() {
+        $('.menu li').removeClass('on');
+        var cur_url = location.href;
+        var cur_path = location.pathname;
+        console.log(cur_url);
+        console.log(cur_url.indexOf('culture'));
+        if(cur_path == '/' || cur_url.indexOf('index') > -1) {
+            console.log('index');
+            $('.menu li').eq(0).addClass('on');
+        } else if(cur_url.indexOf('allring') > -1 || cur_url.indexOf('category') > -1) {
+            console.log('category');
+            $('.menu li').eq(1).addClass('on');
+        } else if(cur_url.indexOf('topic_id=12') > -1) {
+            console.log('brand topic');
+            $('.menu li').eq(2).addClass('on');
+        } else if(cur_url.indexOf('freeservice') > -1) {
+            console.log('freeservice');
+            $('.menu li').eq(3).addClass('on');
+        } else if(cur_url.indexOf('lovenus.html') > -1) {
+            console.log('lovenus');
+            $('.menu li').eq(4).addClass('on');
+        } else if(cur_url.indexOf('culture') > -1) {
+            console.log('culture');
+            $('.menu li').eq(5).addClass('on');
+        } else if(cur_url.indexOf('topic_id=29') > -1) {
+            console.log('brand topic');
+            $('.menu li').eq(6).addClass('on');
+        }
+    });
+</script>
+<div class="category_banner">
+    <div class="cat_ad wrap"></div>
+</div>
+<div class="wrap white">
+    <div class="now">
+        您现在的位置：
+        <a href="index.html">首页</a> <code>&gt;</code>
+        <a>乐订制</a> <code>&gt;</code>
+    </div>
+    <div class="blank10"></div>
+    <div class="block_border style_detail">
+        <dl class="picture">
+            <dd class="stylePic" id="proPic">
+                <ul style="height:455px; width:400px; overflow:hidden;">
+                    <li id="styleBigImg" class="big">
+                        <div id="Comimage" style="position: relative; display: block; width: 400px; height: 400px; background-size: 100% 100%;" class="loadImgWithTransEffect">
+                        </div>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+        <dl class="line">
+            <dd></dd>
+        </dl>
+        <dl class="four">
+            <dd class="dt_tit">
+                <h1><span class="bold" id="Comname"></span> </h1>
+                <ul>
+                    <li>钻戒价格：</li>
+                    <li><span id="yuanjia">￥<font id="salePrice"></font></span></li>
+                    <div class="clear"></div>
+                </ul>
+            </dd>
+            <div class="clear"></div>
+            <dd>
+                <div class="blank">
+                    <ol id="edutitles">
+                        <li class="on" id="edutitle" rel="weight">钻石总重(ct)：
+                            <label id="Comweight"></label>
+                            <span></span></li>
+                        <li id="edutitle" rel="clarity">钻石净度(clarity)：
+                            <label id="Comclarity"></label>
+                            <span></span></li>
+                        <li id="edutitle" rel="color">钻石颜色(color)：
+                            <label id="Comcolor"></label>
+                            <span></span></li>
+                        <li id="edutitle" rel="cut">钻石切工(cut)：
+                            <label id="Comcut"></label>
+                            <span></span></li>
+                        <li class="bottom"></li>
+                    </ol>
+                    <div class="clear"></div>
+                </div>
+                <form action="javascript:addToCart(1020064)" method="post" name="ECS_FORMBUY" id="ECS_FORMBUY">
+                    <ul class="quality">
+                        <li class="material">
+                            <label class="f_l">材质：</label>
+                            <span name="spec_1"  class="on" id="texut"></span>
+                            <div class="clear"></div>
+                        </li>
+                        <div class="clear"></div>
+                        <li class="btn">
+                            <img id="buyNowBtn" class="buyNowBtn pointer" alt="立即购买" src="themes/lzmb/images/buynow.png">
+                            <a id="addCart"><img class="buyNowBtn pointer" alt="加入购物车" src="themes/lzmb/images/addtocart.png"></a>
+                        </li>
+                    </ul>
+                </form>
+                <div class="clear"></div>
+                <div class="resetClear"></div>
+            </dd>
+        </dl>
+        <dl class="education" id="right4c">
+            <ul>
+                <li id="education_weight" rel="weight">
+                    <ul>
+                        <li class="content">
+                            <p><strong>重量Carat</strong></p>
+                            <p>　　钻石的重量是4c中最容易度量的特征，与其它宝石一样，钻石的重量也用克拉来计量。一克拉等于0.2g，每一克拉分为一百分（或相当于200毫克），因此一颗25分的钻石重0.25克拉。同等品质的钻石，重量越大越珍贵，一颗某级品质的2克拉钻石常常要比2颗同样品质的1克拉钻石要来得昂贵。</p>
+                            <p><img alt="" width="165" height="134" src="themes/lzmb/images/r_pic5.gif" /></p>
+                        </li>
+                        <li class="more">
+                            <a class="linkred"  target="_blank">更多钻石知识 <span class="txt_11px">&gt;&gt;</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="education_clarity" rel="clarity" class="hide">
+                    <ul>
+                        <li class="content">
+                            <p><strong>净度Clarity</strong></p>
+                            <p>　　当注视钻石时， 有可能会看见&ldquo;瑕疵&rdquo;或&ldquo;内含物&rdquo;&mdash;&mdash;通常随着晶体组成或扭曲时而形成。净度代表钻石的透明程度，主要是从它的体积、位置和内含物的数量与瑕疵来评级。宝石学家在检视钻石时，会使用 10 倍放大镜来鉴定钻石净度的 11 个等级。</p>
+                            <p><img alt="" width="165" height="189" src="themes/lzmb/images/r_pic7.gif" /></p>
+                        </li>
+                        <li class="more">
+                            <a class="linkred"  target="_blank">更多钻石知识 <span class="txt_11px">&gt;&gt;</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="education_color" rel="color" class="hide">
+                    <ul>
+                        <li class="content">
+                            <p><strong>颜色Color</strong></p>
+                            <p>D级：完全无色。最高色级，极其稀有。<br /> E级：无色。仅仅只有宝石鉴定专家能够检测到微量颜色。是非常稀有的钻石。
+                                <br /> F级：无色。少量的颜色只有珠宝专家可检测到，但是仍被认为是无色级。属于高品质钻石。
+                                <br /> G&mdash;H级：接近无色。当和较高色级钻石比较时，有轻微的颜色。但是这种色级的钻石仍然拥有很高的价值。
+                                <br /> I&mdash;J级：接近无色。可检测到轻微的颜色。价值较高。 <br /> &nbsp;
+                            </p>
+                            <p><img width="165" height="60" alt="" src="themes/lzmb/images/r_pic6.gif" /></p>
+                        </li>
+                        <li class="more">
+                            <a class="linkred"  target="_blank">更多钻石知识 <span class="txt_11px">&gt;&gt;</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li id="education_cut" rel="cut" class="hide">
+                    <ul>
+                        <li class="content">
+                            <p><strong>切工Cut</strong></p>
+                            <p>　　切工是指它的切磨比率的精确性和修饰完工后的完美性。好的切工应该尽可能的体现钻石的亮度和火彩，并且尽量保持原石重量。<br /> GIA把钻石切工分为5个级别:
+                                <br /> Excellent(完美)
+                                <br /> Verygood(非常好)
+                                <br /> Good(好)
+                                <br /> Fair(一般)
+                                <br /> Poor(差)
+                                <br />
+                                <br /> 中国国检分为:
+                                <br /> EX(优)　VG(很好)　G(好)
+                            </p>
+                            <p><img alt="" width="173" height="90" src="themes/lzmb/images/r_pic4.gif" /></p>
+                        </li>
+                        <li class="more">
+                            <a class="linkred"  target="_blank">更多钻石知识 <span class="txt_11px">&gt;&gt;</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </dl>
+        <div class="clear"></div>
+        <div class="blank10"></div>
+        <dl class="proinfo">
+            <dd>
+                <div class="clear"></div>
+                <script type="text/javascript" src="js/utils.js"></script>
+                <dl style="position: relative;" id="goodsComment" class="comment proComment">
+                    <dt><a name="comment"></a>   <ul id="goodsCommentTab">
+                        <li> <a id="commentTab" rel="0" href="javascript:void(0)" class="tab_on">全部评论</a></li>
+                        <li class="resetClear"></li>
+                    </ul>
+                    </dt>
+                    <dd style="opacity: 1;" id="commentContent" class="commentContent">
+                        <div id="ECS_COMMENT">
+                            <div id="comments" class="boxCenterList clearfix" style="height:1%;">
+                            </div>
+                            <script type="text/javascript">
+                                //<![CDATA[
+                                var cmt_empty_username = "请输入您的用户名称";
+                                var cmt_empty_email = "请输入您的电子邮件地址";
+                                var cmt_error_email = "电子邮件地址格式不正确";
+                                var cmt_empty_content = "您没有输入评论的内容";
+                                var captcha_not_null = "验证码不能为空!";
+                                var cmt_invalid_comments = "无效的评论内容!";
+                                /**
+                                 * 提交评论信息
+                                 */
+                                function submitComment(frm) {
+                                    var cmt = new Object;
+
+                                    cmt.username = frm.elements['nick_name'].value;
+                                    //cmt.email           = frm.elements['email'].value;
+                                    cmt.content = frm.elements['content'].value;
+                                    cmt.type = frm.elements['cmt_type'].value;
+                                    cmt.id = frm.elements['id'].value;
+                                    cmt.enabled_captcha = frm.elements['enabled_captcha'] ? frm.elements['enabled_captcha'].value : '0';
+                                    cmt.captcha = frm.elements['captcha'] ? frm.elements['captcha'].value : '';
+                                    cmt.rank = 5;
+
+                                    if(cmt.username.length == 0) {
+                                        alert(cmt_empty_username);
+                                        return false;
+                                    }
+                                    if(cmt.content.length == 0) {
+                                        alert(cmt_empty_content);
+                                        return false;
+                                    }
+
+                                    if(cmt.enabled_captcha > 0 && cmt.captcha.length == 0) {
+                                        alert(captcha_not_null);
+                                        return false;
+                                    }
+
+                                    Ajax.call('comment.php', 'cmt=' + $.toJSON(cmt), commentResponse, 'POST', 'JSON');
+                                    return false;
+                                }
+
+                                /**
+                                 * 处理提交评论的反馈信息
+                                 */
+                                function commentResponse(result) {
+                                    if(result.message) {
+                                        alert(result.message);
+                                    }
+
+                                    if(result.error == 0) {
+                                        var layer = document.getElementById('ECS_COMMENT');
+
+                                        if(layer) {
+                                            layer.innerHTML = result.content;
+                                        }
+                                    }
+                                }
+                                //]]>
+                            </script>
+                            <script type="text/javascript">
+                                jQuery(function($) {
+                                    $("#goodsCommentTab a").focus(function() {
+                                        $(this).blur();
+                                    });
+                                    $("#goodsCommentTab a").click(function() {
+                                        $("#goodsCommentTab a").removeClass('tab_on').addClass('tab_off');
+                                        $(this).removeClass('tab_off').addClass('tab_on');
+
+                                        if(typeof($(this).attr('rel')) != 'undefined' && $(this).attr('rel') != '') {
+                                            cmt_type = $(this).attr('rel');
+                                            $('.oper').show();
+                                            $("#cmt_type").val(cmt_type);
+                                            gotoPage(1, goodsID, cmt_type);
+
+                                            if(cmt_type == 0) {
+                                                $('.oper').hide();
+                                            }
+                                        } else {
+                                            Ajax.call('share_more.php', 'is_ajax=1&goods_id=' + goodsID, shareResponse, 'POST', 'JSON');
+                                            return false;
+                                        }
+                                    });
+
+                                    function shareResponse(result) {
+
+                                        if(result.error == 0) {
+                                            var layer = document.getElementById('ECS_COMMENT');
+
+                                            if(layer) {
+                                                layer.innerHTML = result.content;
+                                            }
+                                            document.getElementById('comment_rscnt').innerHTML = result.count;
+
+                                        } else {
+                                            alert(result.content);
+                                        }
+                                    }
+
+                                });
+                            </script>
+                        </div>
+                    </dd>
+                    <dd class="oper">
+                        <form method="POST" action='' name="frmComment" id="frmComment">
+                            <p class="tit">输入您要说的话</p>
+                            <p>
+                                <textarea class="text" name="content" id="commentFormContent"></textarea>
+                            </p>
+                            <p class="f_l nick">昵称</p>
+                            <p class="f_l">
+                                <input type="text" value="匿名用户" name="nick_name" id="commentFormNickName" class="text" disabled>
+                                <input type="hidden" name="cmt_type" id="cmt_type" value="" />
+                            </p>
+                            <p class="f_r"><input type="image" width="94" height="24" src="themes/lzmb/images/submit_01.jpg" id="commemtSubmitBtn"></p>
+                            <p class="f_r note">字数限制在5-200个</p>
+                            <div class="clear"></div>
+                        </form>
+                        <script>
+                            $("#commemtSubmitBtn").click(function () {
+                                var formData = $("#frmComment").serialize();
+                                $.ajax({
+                                    type:"post",
+                                    url:"/comments_AddServlet",
+                                    data:formData,
+                                    dataType:"json",
+                                })
+                            })
+                        </script>
+                    </dd>
+                </dl>
+            </dd>
+        </dl>
+    </div>
+</div>
+<div class="foot_bg">
+    <div class="services"></div>
+    <div class="index_wrap">
+        <div class="seaver">
+            <dl>
+                <dt>关于我们</dt>
+                <dd>
+                    <a href="article_help-4.html" title="联系我们" target="_blank" rel="nofollow">联系我们</a>
+                </dd>
+                <dd>
+                    <a href="article_help-5.html" title="诚聘贤才" target="_blank" rel="nofollow">诚聘贤才</a>
+                </dd>
+                <dd>
+                    <a href="article_help-86.html" title="权威认证" target="_blank" rel="nofollow">权威认证</a>
+                </dd>
+                <dd>
+                    <a href="article_help-14747.html" title="关于纳尔多" target="_blank" rel="nofollow">关于纳尔多</a>
+                </dd>
+
+            </dl>
+            <dl>
+                <dt>用户指南</dt>
+                <dd>
+                    <a href="article_help-70.html" title="注册用户" target="_blank" rel="nofollow">注册用户</a>
+                </dd>
+                <dd>
+                    <a href="article_help-82.html" title="会员权益" target="_blank" rel="nofollow">会员权益</a>
+                </dd>
+                <dd>
+                    <a href="article_help-83.html" title="常见问题" target="_blank" rel="nofollow">常见问题</a>
+                </dd>
+
+            </dl>
+            <dl>
+                <dt>关于购买</dt>
+                <dd>
+                    <a href="article_help-71.html" title="购买流程" target="_blank" rel="nofollow">购买流程</a>
+                </dd>
+                <dd>
+                    <a href="article_help-72.html" title="支付方式" target="_blank" rel="nofollow">支付方式</a>
+                </dd>
+                <dd>
+                    <a href="article_help-88.html" title="支付帮助" target="_blank" rel="nofollow">支付帮助</a>
+                </dd>
+
+            </dl>
+            <dl>
+                <dt>关于配送</dt>
+                <dd>
+                    <a href="article_help-77.html" title="配送方式" target="_blank" rel="nofollow">配送方式</a>
+                </dd>
+                <dd>
+                    <a href="article_help-78.html" title="配送流程" target="_blank" rel="nofollow">配送流程</a>
+                </dd>
+                <dd>
+                    <a href="article_help-79.html" title="配送问题" target="_blank" rel="nofollow">配送问题</a>
+                </dd>
+
+            </dl>
+            <dl>
+                <dt>售后服务</dt>
+                <dd>
+                    <a href="article_help-73.html" title="退货流程" target="_blank" rel="nofollow">退货流程</a>
+                </dd>
+                <dd>
+                    <a href="article_help-81.html" title="服务细则" target="_blank" rel="nofollow">服务细则</a>
+                </dd>
+                <dd>
+                    <a href="article_help-113.html" title="售后保证" target="_blank" rel="nofollow">售后保证</a>
+                </dd>
+
+            </dl>
+            <dl>
+                <dt>客服中心</dt>
+                <dd>
+                    <a href="article_help-84.html" title="订单查询" target="_blank" rel="nofollow">订单查询</a>
+                </dd>
+                <dd>
+                    <a href="article_help-224.html" title="联系客服" target="_blank" rel="nofollow">联系客服</a>
+                </dd>
+                <dd>
+                    <a href="article_help-225.html" title="建议留言" target="_blank" rel="nofollow">建议留言</a>
+                </dd>
+            </dl>
+        </div>
+        <div class="footer_bar">
+            <a href="article-1.html" rel="nofollow">鉴定机构</a>|
+            <a href="article_help-72.html" rel="nofollow">购买支付</a>|
+            <a href="article-226.html" rel="nofollow">收货指南</a>|
+            <a href="article_help-81.html" target="_blank" rel="nofollow">售后服务</a>|
+            <a href="user.php.html" target="_blank" rel="nofollow">会员中心</a>|
+            <a href="article-85.html" target="_blank" rel="nofollow">关于我们</a>|
+            <a href="article-4.html" target="_blank" rel="nofollow">联系我们</a>|
+            <a href="flinks.html" rel="nofollow">友情链接</a>|
+            <a href="article-221.html" rel="nofollow">申请合作</a>
+
+        </div>
+        <div class="copyright">
+            <p>每一枚纳尔多定制均需实名制：以我之名，冠你指间；一生相伴，一世相随！</p>
+            <p>Copyright 2012-2017 loveforvenus.com All Rights Reserved 深圳市纳尔多钻戒有限公司 版权所有 </p>
+            <p>经营许可证编号：
+                <a href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">粤ICP备12085622号-7</a> 全国咨询热线：400-8030-520 </p>
+            <p>中国互联网违法信息举报中心 | 中国公安网络110报警服务 | 本网站接受中国珠宝玉石首饰行业协会的监督 |
+            </p>
+            <script>
+                var _hmt = _hmt || [];
+                (function() {
+                    var hm = document.createElement("script");
+                    hm.src = "//hm.baidu.com/hm.js?5dd4e9f0f9f64e70ce27e21fcf3b6dce";
+                    var s = document.getElementsByTagName("script")[0];
+                    s.parentNode.insertBefore(hm, s);
+                })();
+            </script>
+        </div>
+    </div>
+</div>
+<div class="float_div">
+    <div class="call_kefu">&nbsp;</div>
+    <ul>
+        <li>
+            <a href="flow.php.html" target="_blank">&nbsp;</a>
+        </li>
+        <li>
+            <a href="userinfo.html" target="_blank">&nbsp;</a>
+        </li>
+        <li id="erweima">
+            <a href="javascript:void(0)">&nbsp;</a>
+        </li>
+        <li id="J_gotop">
+            <a href="javascript:void(0)">&nbsp;</a>
+        </li>
+    </ul>
+    <div class="zxerma"><img src="themes/lzmb/images/zxewm.jpg" /></div>
+</div>
+<div class="popup_float_div" style="display:none">
+    <div class="hide_popup_kefu"></div>
+    <div class="later_call_kefu">&nbsp;</div>
+    <div class="now_call_kefu">&nbsp;</div>
+
+</div>
+
+<script>
+    (function(a, h, c, b, f, g) {
+        a["UdeskApiObject"] = f;
+        a[f] = a[f] || function() {
+            (a[f].d = a[f].d || []).push(arguments)
+        };
+        g = h.createElement(c);
+        g.async = 1;
+        g.charset = "utf-8";
+        g.src = b;
+        c = h.getElementsByTagName(c)[0];
+        c.parentNode.insertBefore(g, c)
+    })(window, document, "script", "https://assets-cli.udesk.cn/im_client/js/udeskApi.js", "ud");
+    ud({
+        "targetSelector": ".now_call_kefu",
+        "selector": ".call_kefu",
+        "code": "22ebfaic",
+        "link": "https://lovenus.udesk.cn/im_client/?web_plugin_id=39048"
+    });
+</script>
+<script language="JavaScript" type="text/javascript">
+    $(document).ready(function() {
+        $('#edutitles li[rel]').hover(function() {
+            $('#edutitles li').removeClass('on');
+            $(this).addClass('on');
+            show_rel = $(this).attr('rel');
+            $('#right4c li[rel]').hide();
+            $('#education_' + show_rel).show();
+        }, function() {});
+
+        //tabs
+        $('.tab li a').focus(function() {
+            $(this).blur();
+        });
+        $('.tab li a').click(function() {
+            $(this).removeClass().addClass('tab_on').siblings().removeClass('tab_on').addClass('tab_off');
+            show_rel = $(this).attr('rel');
+            $('#product_' + show_rel).show().siblings().hide();
+        });
+
+    });
+</script>
+<script type="text/javascript">
+    var goods_id = 1020064;
+    var goodsattr_style = 1;
+    var gmt_end_time = 0;
+    var day = "天";
+    var hour = "小时";
+    var minute = "分钟";
+    var second = "秒";
+    var end = "结束";
+    var goodsId = 1020064;
+    var now_time = 1532395336;
+
+    onload = function() {
+        try {
+            //changePrice();
+            onload_leftTime();
+
+        } catch(e) {}
+    }
+
+    /**
+     * 点选可选属性或改变数量时修改商品价格的函数
+     */
+    function changePrice() {
+        var attr = getSpanSelectedAttributes(document.forms['ECS_FORMBUY']);
+        var qty = document.forms['ECS_FORMBUY'].elements['number'].value;
+        var lz_id = $('#lz_id').val();
+
+        Ajax.call('goods.php', 'act=price&id=' + goodsId + '&attr=' + attr + '&number=' + qty + '&lzid=' + lz_id, changePriceResponse, 'GET', 'JSON');
+    }
+
+    /**
+     * 获得选定的商品属性
+     */
+    function getSpanSelectedAttributes(formBuy) {
+        var spec_arr = new Array();
+        var j = 0;
+        $('ul.quality span').each(function() {
+            if($(this).hasClass('on')) {
+                spec_arr[j] = $(this).attr('attr_id');
+                j++;
+            }
+
+        })
+
+        if($('#jewelrySize').length)
+            spec_arr[j] = $("#jewelrySize  option:selected").attr('attr_id');
+
+        return spec_arr;
+    }
+
+    /**
+     * 接收返回的信息
+     */
+    function changePriceResponse(res) {
+        if(res.err_msg.length > 0) {
+            alert(res.err_msg);
+        } else {
+
+            document.forms['ECS_FORMBUY'].elements['number'].value = res.qty;
+            if(document.getElementById('salePrice'))
+                document.getElementById('salePrice').innerHTML = res.result;
+            if(document.getElementById('kt_price') && res.kt_price)
+                document.getElementById('kt_price').innerHTML = res.kt_price;
+        }
+    }
+
+    function changeTitle() {
+        tag = $('h1 span.bold');
+        old_goods_name = 'Loving heart-尊贵款 钻石女戒';
+        var str = '';
+        $("ul.quality li span.on").each(function() {
+            str += $(this).html() + ' ';
+        });
+        tag.html(str + old_goods_name);
+    }
+</script>
+
+</body>
+
+</html>
+

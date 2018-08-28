@@ -1,0 +1,49 @@
+@charset "gb2312";
+/* CSS Document */
+
+.user-menu{}
+.user-menu dl{ margin:0 0 6px 0;  border:solid 1px #ccc; padding:0 0 15px 0;}
+.user-menu dl dt{height:30px; line-height:30px; width:100%; background-color:#eaeaea; }
+.user-menu dl dt strong{float:left; color:#636b9e; padding-left:20px;}
+.user-menu dl dd{border-bottom:solid 1px #ccc; border-top:none; margin:0  5px 0;height:26px; line-height:26px; text-align:left; padding:0 16px; background:#fff;}
+.user-menu dl dd.first{border-bottom:solid 1px #ccc;margin:0 5px; padding-top:10px;}
+.setW{ width:564px;}
+.mglr34{ margin:0 34px;}
+
+.user_login{font-size:14px;font-weight:bold;padding:20px 10px 5px;color:#f90;border-bottom:1px solid #fce6cf}
+input.blue{padding:2px;font-size:12px;line-height:12px;background:#0f86c8;border:0;cursor:pointer;color:#fff}
+.user_right_con span{float:right;font-size:12px;font-weight:normal;color:#999}
+.user_right_con li{height:32px;line-height:32px;background:url(../images/user/logo_01.jpg) left no-repeat;padding:0 15px 0 27px}
+.user_right_con li.sep{clear:both;height:1px;line-height:1px;font-size:0;background:url(../images/user/sep_bg_01.jpg) repeat-x;}
+.user_right_con li.pagenav{padding:45px 0 0 0;height:20px;text-align:right;background:url(../images/user/pagenav_bg.jpg) repeat-x;color:#999}
+input.pre{width:11px;height:12px;background:url(../images/user/logo_02.jpg) no-repeat;border:0;cursor:pointer}
+input.next{width:11px;height:12px;background:url(../images/user/logo_03.jpg) no-repeat;border:0;cursor:pointer}
+.mg40{margin:40px 48px;}
+.tips{margin-top:20px;padding:15px 15px 40px 50px;height:29px;background:url(../images/user/logo_04.jpg) left no-repeat #f7efe4;}
+a.rules { color:#FF0000; border:1px solid #FF0000; margin-left:8px; line-height:21px; text-decoration:none; font-size:12px; padding:3px 10px;}
+a:hover.rules { color:#663300; border:1px solid #663300;}
+.user_right_con h3 {
+    background: url("../images/user/title_bg_01.jpg") no-repeat scroll 0 0 transparent;
+    font-size: 14px;
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 25px;
+}
+.user-form{ border:1px solid #CDCDCD;}
+.uf-top{position:relative;}
+.avatar{position:absolute;top:80px;left:50%;margin-left:-65px;}
+.edit_info{text-align:center;position:absolute;top:220px;width:100%;}
+.edit_info a{text-decoration:underline;}
+.welcome{text-align:center;color:#636b9e;font-family:"ºÚÌå";font-size:20px;position:absolute;top:250px;width:100%;}
+.uf-bottom{}
+.uf-body{}
+.fcolor{ color:#ae1325;}
+
+#right .cont_yz{ margin:20px 50px; margin-bottom:70px;}
+#right .cont_yz h3{line-height:30px; font-weight:normal; font-size:14px; margin-bottom:15px; color:#666;}
+#right .cont_yz h3 .input{ background:url('../images/user/authlogin2_10.gif') no-repeat; width:116px; height:20px; text-align:center; line-height:20px;font-weight:normal; color:#999;font-size:12px;border:none; cursor:pointer; padding-top:2px; }
+#right .cont_yz .botton{ background:url('../images/user/authlogin2_15.gif') no-repeat; width:94px; height:24px; text-align:center; line-height:24px; margin-left:77px; color:#fff; font-size:12px;border:none; cursor:pointer; padding-top:3px;}
+#right .cont_yz input{padding:5px; width:208px; color:#333; font-size:14px; font-family:Arial;}
+
+.pay_status form{ display:inline;}

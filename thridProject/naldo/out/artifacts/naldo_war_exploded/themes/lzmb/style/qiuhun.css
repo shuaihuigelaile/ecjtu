@@ -1,0 +1,223 @@
+@charset "gb2312";
+
+.qiuhun_topbg{height:33px;line-height:33px;background:#f7f7f7; border-bottom:2px solid #d9d9d9;}
+.qiuhun_logo{ float:left;  padding-top:3px;}
+.qiuhun_logo a{ margin:0;}
+.qiuhun_nav{ float:left; width:450px;}
+.qiuhun_nav .menu li{background:none; font-size:12px; font-weight:normal; height:33px; line-height:33px; padding-left:5px;}
+.qiuhun_nav .menu_div{ top:33px;}
+.qiuhun_menu{ padding-right:0px;}
+.qiuhun_menu .top_menu_div{ top:33px;}
+.qiuhun_menu a{ margin:0 0 0 3px;}
+.qiuhun_tel{ background-position:left center; height:33px; line-height:33px;}
+.menu .menu_div{ left:0px;}
+ 
+.middle{ margin-top:20px}
+
+.qh-line{ width:982px; height:18px; background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/xline.gif) repeat-x; float:left;}
+#left-pic{ float:left; width:488px; height:620px; padding-left:15px;}
+#right-info { float:left; width:474px; background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/nrknew.gif) no-repeat 0px 150px; height:650px}
+
+.qh-user{ margin-top:40px;}
+#qh-t1{ width:256px; float:left; margin-left:40px; display:inline}
+#qh-t1 h1{ font-size:12px; font-weight:bold; border-bottom:#707070 solid 1px; height:20px; line-height:20px;}
+#qh-t1 ul{ float:left; width:256px; margin-top:8px;}
+#qh-t1 li{ line-height:16px; text-align:right; height:16px;}
+#qh-pic { width:140px; float:left;  margin-left:30px;}
+.qcolor1{ color:#969696}
+
+.qh-content { width:335px; float:left; margin-left:40px;  margin-top:35px; line-height:22px; height:255px; display:inline ;
+ overflow:auto;scrollbar-face-color: #cccccc; scrollbar-shadow-color: #FFFFFF; scrollbar-highlight-color: #fff; scrollbar-3dlight-color: #FFFFFF; scrollbar-darkshadow-color: #FFFFFF; scrollbar-track-color: #fff; scrollbar-arrow-color: #FFFFFF; }
+.qh-content img{ max-width:310px;}
+
+.relate-p{ float:left; width:200px; margin-left:150px; display:inline; margin-top:20px;}
+#relate-n { float:left; width:100px; padding-top:40px; text-align:right; color:#999999}
+#relate-pic{ float:left; margin-left:12px;}
+
+.brand-left{ width:600px; /* background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/brandinfo.gif) no-repeat 50px 0px;*/ float:left; margin-top:30px;}
+#brand-show-1{ float:left; width:180px; height:80px; padding-top:50px; padding-left:100px;}
+#brand-show-2{ float:left; width:280px;height:70px;padding-top:60px;  padding-left:20px;}
+#brand-show-3{ float:left; width:160px;height:50px;  padding-left:140px; padding-top:18px;}
+#brand-show-4{ float:left; width:250px;height:50px; padding-left:30px; padding-top:45px;}
+.brand-right{ width:382px; float:left; margin-top:30px;}
+
+.brand-left2{ width:540px; float:left; margin-top:20px; padding:0px 20px}
+.brand-left2 h2{ font-size:14px; line-height:25px; height:25px; color:#d41445}
+.brand-left2 .content{ line-height:20px}
+.brand-left2 a{ color:#d41445}
+.show_box{ width:540px; height:57px;overflow: hidden; }
+
+.qh-share{ width:980px;float:left; border:#cccccc solid 1px; height:42px; margin-top:20px}
+#qh-share-left { float:left; height:42px; border-right:#cccccc solid 1px; width:70px; line-height:42px; font-weight:bold; text-align:center}
+#qh-share-right1{ float:left; width:100px ; line-height:42px; padding-left:30px }
+#qh-share-right1 .to_0{ background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/lfx.jpg) no-repeat 0% 50% ; width:90px; height:42px; display:inline-block}
+.qh-share-right2{ float:left; width:150px; height:42px; background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/fxto.gif) 0% 50% no-repeat ; line-height:42px;}
+.qh-share-right2 span{ margin-left:10px}
+#qh-share-right3{ float:left; width:200px ; line-height:42px;}
+#qh-share-right3 a{ margin-left:5px;}
+#qh-share-right3  .jiathis_style{ float:right; margin:12px 5px 0 0;}
+#qh-share-right3 .to_1{ background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/s_icon_01.gif) no-repeat 0% 50% ; width:24px; height:42px; display:inline-block; }
+#qh-share-right3 .to_2{ background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/s_icon_03.gif) no-repeat 0% 50%; width:24px; height:42px;  display:inline-block;}
+#qh-share-right3 .to_3{ background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/s_icon_05.gif) no-repeat 0% 50%; width:24px; height:42px;  display:inline-block}
+#qh-share-right3 .to_4{ background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/s_icon_07.gif) no-repeat 0% 50%; width:24px; height:42px; display:inline-block}
+#qh-share-right3 .to_5{ background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/s_icon_09.gif) no-repeat 0% 50%; width:24px; height:42px; display:inline-block}
+#qh-share-right3 .to_6{ background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/s_icon_11.gif) no-repeat 0% 50%; width:24px; height:42px; display:inline-block}
+
+.qh-message{width:982px;float:left;}
+.qh-message dl{ margin-top:20px; }
+.qh-message dt{ line-height:20px; height:20px; padding-top:5px; padding-bottom:5px;}
+.qh-message dd{ line-height:20px; padding-top:5px; padding-bottom:5px; background:#f4f4f4; margin-bottom:10px; color:#343434; padding-left:35px;}
+.m-name{ color:#d41445 }
+.m-other{color: #aeaeae}
+.qh-message dt span{ margin-left:10px;}
+
+.qh-pageto{ width:972px;float:left; text-align:right; font-size:12px; color:#000; padding-right:10px;}
+.qh-pageto .pg_n{ border:#ccc solid 1px; padding:4px 8px; display:inline-block; margin-left:6px; }
+.qh-pageto .pg_now{ border:#fc6e02 solid 1px; background:#ffede1;  padding:4px 8px; margin-left:6px; display:inline-block; }
+
+.qh-pageto .pg2{ background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/pt_r_off.gif) no-repeat 95% 50%;  border:#ccc solid 1px; padding:4px 10px 4px 6px;display:inline-block;   }
+.qh-pageto .pg2_on{ background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/pt_r_on.gif) no-repeat 95% 50%;  border:#ccc solid 1px; padding:4px 10px 4px 6px; display:inline-block;  }
+.qh-pageto .pg1{ background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/pt_l_off.gif) no-repeat 5% 50%;   border:#ccc solid 1px; padding:4px 6px 4px 10px;  margin-right:6px; display:inline-block;  }
+.qh-pageto .pg1_on{ background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/pt_l_on.gif) no-repeat 5% 50%; border:#ccc solid 1px; padding:4px 6px 4px 10px; margin-right:6px; display:inline-block;  }
+
+
+.fbly-t{ width:982px; float:left; margin-top:10px; margin-bottom:8px}
+.fbly-t .top_login a{ display:inline-block; margin:0 7px; line-height:22px;}
+.fbly-t .member_info{ line-height:18px;}
+.fbly-t .member_info a{ margin:0 7px;}
+.fbly{ width:982px;  background:#f6f6f6; float:left;  padding-top:25px; padding-bottom:25px;}
+.fbly label{ margin-left:80px}
+.fbly .input{ width:800px; height:100px; border:#cccccc solid 1px;}
+.fbly p{ text-align:center; margin-top:10px}
+.fbly .button{ background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/button.gif) no-repeat; width:78px; height:29px; border:none; color:#fff; font-weight:bold ; cursor:pointer}
+
+
+.fb-t{ float:left; width:80px; color:#000; font-weight:bold; line-height:18px; padding-left:5px}
+.fb-1 {float:left; width:90px; line-height:18px;}
+.fb-1 a{ margin-left:5px; margin-right:5px;}
+.fb-2{ height:18px; background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/f-bg.gif) no-repeat ; width:167px; line-height:18px; float:left;  }
+.fb-2 .fb-icon1{ background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/f-icon1.gif) no-repeat 0px 1px ; width:16px; height:16px; display:inline-block; }
+.fb-2 .fb-icon2{ background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/f-icon2.gif) no-repeat 0px 1px;  height:16px; width:17px; display:inline-block ; }
+.fb-2 .fb-icon3{ background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/f-icon3.gif) no-repeat 0px 1px;  height:16px; width:38px; display:inline-block ; }
+.fb-2 a{ margin-left:5px; }
+.fb-2 .sc{ color:#cccccc; margin-left:3px}
+
+
+.red_bg{ background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/red.gif);}
+.orange_bg{ background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/orange.jpg);}
+.brown_bg{ background:url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/brown.jpg);}
+
+.defalut_word{ padding-left:10px; line-height:25px;}
+
+/*Í¼Æ¬ÇÐ»»*/
+#featureContainer {margin: 0px auto;}
+#wrap { overflow: hidden}
+#load {
+ TEXT-INDENT: -9999px; MARGIN: 0px auto; WIDTH: 923px; DISPLAY: none; BACKGROUND-REPEAT: no-repeat; BACKGROUND-POSITION: center 50%; HEIGHT: 100px; 
+}
+#feature {	 POSITION: relative;}
+#feature .button {	 POSITION: absolute;  TOP: 72px; LEFT: 0px}
+#feature .prev {
+	 TEXT-INDENT: -9999px; WIDTH: 30px; DISPLAY: block; BACKGROUND: url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/feature_left.gif) center top;  HEIGHT: 48px; TOP: 286px;  position:absolute;left:0;
+}
+#feature .next {
+	 TEXT-INDENT: -9999px; WIDTH: 30px; DISPLAY: block; BACKGROUND: url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/feature_right.gif) center top;HEIGHT: 48px;  TOP: 286px; position:absolute;right:0;
+}
+#feature .prev:hover {
+	BACKGROUND-POSITION: center bottom
+}
+#feature .next:hover {
+	BACKGROUND-POSITION: center bottom
+}
+.featureUL {
+	POSITION: relative; PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 2800px; PADDING-RIGHT: 0px; FLOAT: left; LEFT: 0px
+}
+.featureBox {
+	BACKGROUND-IMAGE: url(https://www.loveforvenus.com/themes/lzmb/images/qiuhun/bg-featurebox.jpg); WIDTH: 488px; BACKGROUND-REPEAT: no-repeat; FLOAT: left; OVERFLOW: hidden;
+}
+#botton-scroll {
+	Z-INDEX: 0;MARGIN: 0px auto; FLOAT: left; 
+}
+#block {
+	Z-INDEX: 0;  POSITION: relative;  margin: 0px auto; OVERFLOW: hidden;
+}
+#block .pic_box {	FLOAT: left;}
+#block .pic_box .feature-title {	 FONT-WEIGHT: normal}
+#block .pic_box .feature-thumb {	WIDTH: 240px; FLOAT: left; HEIGHT: 150px}
+
+
+
+/*±ãÀûÌù*/
+
+.blt_list{ position:relative; height:250px;}
+
+.jSticky-large{
+	background:transparent url(https://www.loveforvenus.com/themes/lzmb/images/stickynote-large.png) no-repeat top left;
+	width:225px;
+	height:228px;
+	position: absolute;
+	z-index:999999;
+}
+.jSticky-medium{
+	background:transparent url(https://www.loveforvenus.com/themes/lzmb/images/bltbg3.png) no-repeat top left;
+	width:160px;
+	height:162px;
+	position: absolute;
+	z-index:999999;
+}
+.jSticky-delete{
+	background:transparent url(https://www.loveforvenus.com/themes/lzmb/images/delete.png) no-repeat top left;
+	height:14px;
+	width:14px;
+	position:absolute;
+	cursor:pointer;
+}
+.jSticky-medium .jStickyNote textarea, .jSticky-medium .jStickyNote p{
+	font-size: 14px;
+	font-weight:bold;
+	height:105px;
+	overflow:hidden;
+}
+.jSticky-large .jStickyNote textarea, .jSticky-large .jStickyNote p{
+	height:160px;
+	font-size: 16px;
+}
+.jStickyNote textarea{
+	width:75%;
+	background-color:transparent;
+	border:none;
+	font-family: 'Comic Sans MS',Textile,cursive;
+	font-size:16px;
+	overflow:hidden;
+	color:#999;
+	padding:0px;
+	margin:15px 0px 0px 24px;
+	float:left;
+	resize:none;
+}
+.jStickyNote p{
+	font-family: 'Comic Sans MS',Textile,cursive;
+	color:#444;
+	margin:45px 0px 0px 24px;
+	overflow:hidden;
+	width:75%;
+	float:left;
+}
+.jSticky-large .jSticky-create{
+	float:right;
+	width:14px;
+	height:14px;
+	background:transparent url(https://www.loveforvenus.com/themes/lzmb/images/ok.png) no-repeat top left;
+	margin-right:1px;
+	margin-top:185px;
+	cursor:pointer;
+}
+.jSticky-medium .jSticky-create{
+	float:right;
+	width:14px;
+	height:14px;
+	background:transparent url(https://www.loveforvenus.com/themes/lzmb/images/ok.png) no-repeat top left;
+	margin-right:1px;
+	margin-top:80%;
+	cursor:pointer;
+}
