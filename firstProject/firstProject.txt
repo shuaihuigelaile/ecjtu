@@ -1,0 +1,4 @@
+首先这两个文件是一个java项目,MakeFirends文件是这个java项目的前台页面和业务逻辑处理代码，
+makefriend.sql文件是sql数据库源码。
+环境:Myeclipse2016+mysql+tomcat8.5
+要想使用只需将这两个文件进行导入运行即可，这个项目是一个交友网站

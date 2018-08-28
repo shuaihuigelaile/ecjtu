@@ -1,0 +1,13 @@
+.quote { behavior:url(js/PIE.htc); position:relative;}
+
+.socials a:hover{
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+}
+
+.thumbs img:hover, .selected img{
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=80);
+}
+
+.sf-menu>li>a{
+	background: url(../images/spacer.png) 0 0 repeat;
+}

@@ -1,0 +1,5 @@
+首先这两个文件是一个javaweb项目,ChinaEducations文件是这个java项目的前台页面和业务逻辑处理代码，采用了
+springmvc+spring+mybatis架构
+papa.sql文件是sql数据库源码。
+环境:IDEA2017+mysql+tomcat8.5
+要想使用只需将这两个文件进行导入运行即可，这个项目是一个大型的培训教育网站
