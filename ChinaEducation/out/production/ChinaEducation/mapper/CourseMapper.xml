@@ -1,0 +1,22 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.CourseMapper">
+    <select id="getCourse" resultType="entity.Course">
+        select * from t_course limit 0,5
+    </select>
+    <select id="findByPage" parameterType="Map" resultType="entity.Course">
+        select * from t_course limit #{start},#{size}
+    </select>
+    <select id="selectCount" resultType="java.lang.Integer">
+        select count(*) from t_course
+    </select>
+    <select id="findCourseById" parameterType="java.lang.Integer" resultType="entity.Course">
+        select * from t_course where id=#{id}
+    </select>
+
+    <!--删除对应id的课程-->
+    <delete id="deleteCourse" parameterType="java.lang.Integer">
+        delete from t_course where id=#{id}
+    </delete>
+</mapper>

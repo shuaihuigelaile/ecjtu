@@ -1,0 +1,39 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.CartMapper">
+    <select id="findUserByName" resultType="entity.User" parameterType="java.lang.String">
+        select * from t_user where username=#{username}
+    </select>
+    <select id="selectOne" parameterType="entity.Cart" resultType="entity.Cart">
+        select * from t_mall_cart where userId=#{userId} and productId=#{productId}
+    </select>
+    <insert id="insertCart" parameterType="entity.Cart">
+        insert into t_mall_cart(id,userId,productId,quantity,checked,createTime,updateTime) values(#{id},#{userId},#{productId},#{quantity},#{checked},#{createTime},#{updateTime})
+    </insert>
+    <update id="updateByPrimaryKey" parameterType="entity.Cart">
+        update t_mall_cart set quantity=#{quantity},updateTime=#{updateTime} where userId=#{userId} and productId=#{productId}
+    </update>
+    <select id="queryCartList" resultType="entity.Cart" parameterType="java.lang.Integer">
+        select * from t_mall_cart where userId=#{userId}
+    </select>
+    <delete id="deleteItem" parameterType="entity.Cart">
+        delete from t_mall_cart where id=#{id}
+    </delete>
+
+    <!--<select id="findProductIdByUserId" parameterType="java.lang.Integer" resultType="java.lang.Integer">-->
+        <!--select productId from t_mall_cart where userId={#userId}-->
+    <!--</select>-->
+    <!--根据用户名找到对应的用户id-->
+    <select id="findUserIdByUsername" parameterType="java.lang.String" resultType="java.lang.Integer">
+        select id from t_user where  username=#{username}
+    </select>
+
+    <select id="findCourseByProductId" parameterType="java.lang.Integer" resultType="entity.Course">
+        select * from t_course where id=#{id}
+    </select>
+
+    <select id="findNumberOfCart" parameterType="java.lang.Integer" resultType="entity.Cart">
+        select * from t_mall_cart where userId=#{userId}
+    </select>
+</mapper>

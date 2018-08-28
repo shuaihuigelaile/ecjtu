@@ -1,0 +1,770 @@
+﻿<!DOCTYPE html>
+<html id="ng-app">
+<head lang="zh">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=8">
+    <link rel="stylesheet" type="text/css" href="../css/tpshop.css"/>
+    <title>购物车-学海教育官网</title>
+    <meta name="keywords"
+          content="学海教育,教育培训,教育加盟,教育培训机构加盟,文化课课外辅导,一对一辅导,一对一补习,一对一家教,高考补习班,数学补习班,暑假补习班,寒假补习班,暑假辅导班,高中补课"/>
+    <meta name="description"
+          content="学海教育是集教育培训、教育研发、双师云课堂、特许连锁等业务于一体的个性化教育集团，专注于K12教育个性化课外辅导，致力于为孩子创造最优质的个性化教育服务平台。针对小学，初中，高中开设数学，语文，英语，物理，化学，地理，历史，生物，政治等一对一家教辅导，一对一补习课程以及寒假暑假补习班。"/>
+    <link href="../css/common.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="../css/jh.css">
+    <link rel="stylesheet" href="../css/qfbase.css">
+    <script src="../js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/pc_common.js"></script>
+    <script src="../js/layer.js"></script>
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+</head>
+<body class="ng-scope">
+<!-- 头部顶栏 start [[-->
+<div class="w-all w-minw bd-sd-b hg-45">
+    <div class="w-main m-auto">
+        <!-- top left start-->
+        <div class="fl"><span class="fs-12 line-h45 ftc-000000 dsblock fl"> 济南</span> <a href="城市.html"
+                                                                                         class="dsblock fl line-h45 fs-12 ftc-fc0503">[切换地图]</a>
+            <a href="index.html" class="dsblock fl fs-12 ftc-000000 line-h45 m-l-70">首页</a>
+            <!--top 导航 start-->
+            <div class="hover-topnav fl m-l-45">
+                <div class="dh_nav fl fs-12 ftc-000000 line-h45"><span class="dsblock hg-45"><i
+                        class="p-l-15 ql_icon dh_topnav hg-45 fl"></i>导航</span>
+                    <ul class="dh_nav_sub bg-c-ffffff bd-sd-b">
+                        <li><a href="#"><i class="ql_icon"></i>课程</a></li>
+                        <li><a href="#"><i class="ql_icon"></i>初中</a></li>
+                        <li><a href="#"><i class="ql_icon"></i>高中</a></li>
+                        <li><a href="#"><i class="ql_icon"></i>心理课</a></li>
+                        <li><a href="#"><i class="ql_icon"></i>讲师</a></li>
+                        <li><a href="#"><i class="ql_icon"></i>加盟</a></li>
+                        <li><a href="#"><i class="ql_icon"></i>分校</a></li>
+                        <li><a href="#"><i class="ql_icon"></i>资讯</a></li>
+                        <li><a href="#"><i class="ql_icon"></i>联系我们</a></li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+            </div>
+            <!--top 导航 end-->
+            <!--top wap start-->
+            <div class="hover-topnav fl m-l-45">
+                <div class="dh_nav fl fs-12 ftc-000000 line-h45"><span class="dsblock hg-45"><i
+                        class="p-l-15 ql_icon top_wapewem hg-45 fl"></i>手机端</span>
+                    <div class="top_wap_ewem bg-c-ffffff bd-sd-b"><img src="../pics/wap.png" width="100" alt=""/>
+                        <p class="w-all fs-13 text-c line-h25">扫描二维码</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top left end-->
+        <!-- top right start-->
+        <script type="text/javascript">
+            function getUrlParam(name) {
+                var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);
+                if (r != null)
+                    return unescape(r[2]);
+                return null;
+            }
+            var id=getUrlParam("data");
+            $(function () {
+                $("#gouwuche").text(id);
+            })
+
+            //获取登录所需的用户名
+            //加载获得的session值，然后判断是否登录，登录了就替换掉登录注册
+            var sessionValue="";
+            function getLogin(){
+                console.log(sessionValue);
+                if(sessionValue!=""){
+                    list2();
+                }else {
+
+                }
+            }
+            <!--一进来就加载该ajax，判断是否登录-->
+            $(function () {
+                list1();
+            });
+            function list1(){
+                $.ajax({
+                    type: "get",
+                    url: "/getLogin",
+                    success: function (data) {
+                        sessionValue=data;
+                        getLogin();
+                    }
+                });
+            }
+
+            function list2() {
+                document.getElementById("k").innerHTML =  "<a class=\"fs-12 ftc-000000 line-h45\" href=\"login.html\"><i class=\"p-l-20 ql_icon login_icon hg-45 fl m-r-10\"></i>"+sessionValue+"</a> <span class=\"fs-12 ftc-000000 line-h45 m-l-15 m-r-15\">|</span> <a class=\"fs-12 ftc-000000 line-h45\" href=\"register.html\">个人中心</a>";
+            }
+        </script>
+        <div class="fr">
+            <!--登录注册 start-->
+            <div class="fl" id="k">
+                <a class="fs-12 ftc-000000 line-h45" target="_parent" href="login.html">
+                    <i class="p-l-20 ql_icon login_icon hg-45 fl m-r-10"></i>
+                    <span id="name">请登录</span>
+                </a>
+                <span class="fs-12 ftc-000000 line-h45 m-l-15 m-r-15">|</span>
+                <a class="fs-12 ftc-000000 line-h45" target="_parent" href="reg.html">
+                    注册
+                </a>
+            </div>
+            <!--登录注册 end-->
+            <!--我的购物车 start-->
+            <div class="fl m-l-30" id="hd-my-cart">
+                <div class="my-cart">
+                    <a href="#" target="_parent">
+                        <i class="p-l-25 ql_icon cart_icon hg-45 fl m-r-10"><em id="gouwuche"></em></i>
+                        <p class="fl fs-12 ftc-000000 line-h45">我的购物车</p>
+                    </a>
+
+                </div>
+            </div>
+            <!--我的购物车 end-->
+            <!--top 客服中心 start-->
+            <div class="hover-topkf fl m-l-45">
+                <div class="top_kf fl fs-12 ftc-000000 line-h45"><span class="dsblock hg-45">客服中心<i
+                        class="p-l-10 m-l-10 ql_icon top_kficon hg-45 fr"></i></span>
+                    <ul class="top_kf_list bg-c-ffffff bd-sd-b">
+                        <li><a href="#"><i class="ql_icon"></i>加盟热线 ：400-996-9910</a></li>
+                        <li><a href="#"><i class="ql_icon"></i>联系电话：0531-81768062</a></li>
+                        <li><a href="#"><i class="ql_icon"></i>邮箱：xuehaiedu@yeah.net</a></li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+            </div>
+            <!--top 客服中心 start-->
+        </div>
+        <!-- top right end-->
+    </div>
+</div>
+<!-- 头部顶栏 end ]]-->
+<div class="fn-cart-clearing">
+    <div class="wrapper1190" my-cart="">
+        <!-- cart-title -->
+        <div class="order-header">
+            <div class="layout after">
+                <div class="fl">
+                    <div class="logo pa-to-36 wi345"><a href="/"><img src="../pics/ql_logo.gif"
+                                                                      alt=""></a></div>
+                </div>
+                <div class="fr">
+                    <div class="pa-to-36 progress-area">
+                        <div class="progress-area-wd"></div>
+                        <div class="progress-area-tx" style="display:none"></div>
+                        <div class="progress-area-cg" style="display:none"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end cart-title -->
+        <div class="ui_tab">
+            <!-- ngIf: !status.overseasEmpty -->
+            <div class="ui_tab_content">
+                <div class="clearing-c cart-content">
+                    <div class="layout after-ta">
+                        <div class="sc-list">
+                            <form name="cart_form" id="cart_form" action="ajaxCartList.html">
+                                <div id="ajax_return">
+                                    <div class="sc-pro-list">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="1">
+                                            <tbody>
+                                                <tr class="ba-co-danhui">
+                                                    <th class="pa-le-9" align="center" valign="middle">&nbsp;&nbsp;&nbsp;</th>
+                                                    <th align="center" valign="middle" colspan="2" >课程</th>
+                                                    <th align="center" valign="middle" >原价(元)</th>
+                                                    <th align="center" valign="middle" width="200px">当前价格(元)</th>
+                                                    <th align="center" valign="middle">数量</th>
+                                                    <th align="center" valign="middle">小计</th>
+                                                    <th align="center" valign="middle">操作</th>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+                                    <!--<div class="sc-pro-list">-->
+                                        <!--<table width="100%" border="0" cellspacing="0" cellpadding="1">-->
+                                            <!--<tbody>-->
+                                            <!--<tr class="ba-co-danhui">-->
+
+                                                <!--<th class="pa-le-9" align="center" valign="middle"><label>-->
+                                                    <!--<input type="checkbox" name="select_all" id="select_all2" onchange="check_all();" value="1">-->
+                                                <!--</label>&nbsp;&nbsp;</th>-->
+                                                <!--<th align="center" valign="middle" colspan="2">课程</th>-->
+                                                <!--<th align="center" valign="middle">原价(元)</th>-->
+                                                <!--<th align="center" valign="middle">当前价格(元)</th>-->
+                                                <!--<th align="center" valign="middle">数量</th>-->
+                                                <!--<th align="center" valign="middle">小计</th>-->
+                                                <!--<th align="center" valign="middle">操作</th>-->
+                                            <!--</tr>-->
+                                            <!--</tbody>-->
+                                        <!--</table>-->
+                                    <!--</div>-->
+                                    <div id="mainbody">
+                                    <script type="text/javascript">
+                                        var cartId=null;
+                                        var allPrice=0;
+                                        $.ajax({
+                                            type:"post",
+                                            url:"/showCartList",
+                                            dataType:"json",
+
+                                            success:function (data) {
+                                                var len=data["num"];
+                                                var html="<div class=\"sc-pro-list\">";
+                                                for(var i=1;i<len;i++){
+                                                    var pid = data[0][i-1].productId;
+
+                                                    allPrice=allPrice+data[pid].price*data[0][i-1].quantity;
+                                                    html=html+"<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\" id='checkBoxList'>"+
+                                                        "<tbody>"+"<tr class=\"ba-co-danhui\">"+"<th class=\"pa-le-9\" align=\"center\" valign=\"middle\" width='100px'><label>"+
+                                                        "<input id='"+data[pid].id+"' name='sel' type=\"checkbox\" class =\"select_number\"  value=\"1\" onclick='getAllPrice("+data[pid].id+","+data[pid].price+","+data[0][i-1].quantity+")'>" +
+                                                        "</label></th>"+"<th align=\"center\" valign=\"middle\" colspan=\"1\" width='200px'>"+
+                                                        data[pid].name+"</th>"+"<th align=\"center\" valign=\"middle\" width='250px'>"+data[pid].oldprice+
+                                                        "<th align=\"center\" valign=\"middle\" width='200px' class='getPrice'>"+data[pid].price+"</th>"+
+                                                        "<th align=\"center\" valign=\"middle\" width='150px' class='number'>"+data[0][i-1].quantity+"</th>"+
+                                                        "<th align=\"center\" valign=\"middle\">"+data[pid].price*data[0][i-1].quantity+"</th>"+
+                                                        "<th align=\"center\" valign=\"middle\">"+
+                                                        "<a href='javascript:void(0);' onclick='sendCartId("+data[0][i-1].id+")'>删除</a>"+"</th></tr></tbody></table>";
+                                                    // html=html+"<table width=\"100%\" border=\"0\" cellspacing=\"0\" cellpadding=\"1\" id='checkBoxList'>"+
+                                                    //     "<tbody>"+"<tr class=\"ba-co-danhui\">"+"<th class=\"pa-le-9\" align=\"center\" valign=\"middle\" width='100px'><label>"+
+                                                    //     "<input type=\"checkbox\" name=\"select_all\" id=\"select_all2\" value=\"1\">" +
+                                                    //     "</label></th>"+"<th align=\"center\" valign=\"middle\" colspan=\"1\" width='200px'>"+
+                                                    //         data[i].name+"</th>"+"<th align=\"center\" valign=\"middle\" width='250px'>"+data[i].oldprice+
+                                                    //         "<th align=\"center\" valign=\"middle\" width='200px'>"+data[i].price+"</th>"+
+                                                    //         "<th align=\"center\" valign=\"middle\" width='150px'>"+data[0][i-1].quantity+"</th>"+
+                                                    //         "<th align=\"center\" valign=\"middle\">"+"小计"+"</th>"+
+                                                    //         "<th align=\"center\" valign=\"middle\">"+
+                                                    //         "<a href='javascript:void(0);' onclick='sendCartId("+data[0][i-1].id+")'>删除</a>"+"</th></tr></tbody></table>";
+
+                                                }
+                                                    html=html+"</div>";
+                                                $("#mainbody").html(html);
+                                            }
+                                        });
+                                        var totoalPrice=0;
+                                        function getAllPrice(obj,price,quantity) {
+                                            // alert("check")
+                                            if($("#"+obj).is(":checked")){
+                                                totoalPrice=totoalPrice+price*quantity;
+                                            }else {
+                                                totoalPrice=totoalPrice-price*quantity;
+                                            }
+                                            $("#totalPrice1").text(totoalPrice);
+                                            // $("#totalPrice1").empty();
+                                            // $("#totalPrice1").append(totoalPrice);
+                                        }
+
+
+                                        function  sendCartId(id) {
+                                            alert("你确定要删除？");
+                                            $.ajax({
+                                                type:"post",
+                                                url:"/deleteCart?cartId="+id,
+                                                dataType:"json",
+                                                success:function (data) {
+                                                    alert("我完成了返回");
+                                                }
+                                            })
+                                        }
+
+
+
+
+
+                                            function add() {
+                                                if($("#select_all").prop("checked")==true){
+                                                    $("input[name='sel']").prop("checked",true);
+                                                    $("#totalPrice1").text(allPrice);
+
+                                                }else {
+                                                    $("input[name='sel']").prop("checked",false);
+                                                    $("#totalPrice1").text(0);
+                                                }
+                                            }
+
+                                        // $(document).ready(function(){
+
+                                            // $(".select_number").click(function () {
+                                            //     //获取每一个的数量
+                                            //     var num=parseInt($(this).parent().parent().parent().children(".number").text());
+                                            //     //获取每一个的价格
+                                            //     var goods_price = parseInt($(this).parent().parent().parent().children(".getPrice").text());
+                                            //     $(".totalPrice").text(parseInt($(".totalPrice").text())+num*goods_price);
+                                            // })
+
+
+                                        // });
+                                        // $(document).ready(function() {
+                                        //     var value=0;
+                                        //     $("input[name='sel']").click(function() {
+                                        //         alert("我要");
+                                        //         alert($("input[type=checkbox]:checked").length);
+                                        //     });
+                                        // });
+                                        // var currentPrice=
+                                        // var totalPrice=0;
+                                        // $(document).ready(function(){
+                                        //         if($(".select_all2").is(':checked')){
+                                        //             totalPrice=totalPrice+
+                                        //         }
+                                        // })
+
+                                        //去购物
+                                        function gotoBuy(){
+                                            $.ajax({
+                                                type:"post",
+                                                url:"/insertOrder?username="+sessionValue+"&totalPrice="+totoalPrice,
+                                                dataType:"json",
+                                                success:function (data) {
+                                                    alert("完成插入");
+                                                }
+                                            })
+                                        }
+                                    </script>
+                                    </div>
+                                    <div class="sc-total-list ma-to-20 sc-pro-list">
+                                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                            <tbody>
+                                                <tr>
+                                                    <td class="pa-le-28 gwx-xm-dwz">
+                                                        <label>
+                                                            <input type="checkbox" name="select_all" id="select_all"  value="1" onclick="add()">
+                                                            全选
+                                                        </label>
+                                                        <a href="javascript:void(0);" onclick="del_cart_more()">删除选中课程</a>
+                                                    </td>
+                                                    <td width="190" align="right">总计金额:</td>
+                                                    <td width="69" align="right" class="totalPrice" id="totalPrice1">0</td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="sc-acti-list ma-to-20 "><a class="gwc-jxgw" href="javascript:history.go(-1);">继续购课</a>
+                                <a class="gwc-qjs" href="javascript:void(0)" data-url="cart2.html" onclick="gotoBuy()">去结算</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearing-recommend wrapper1190">
+            <!-- 为您推荐 -->
+            <!-- ngIf: specialOfferTips -->
+            <div class="cr-block-01 cr-block-preferbuy ng-scope ng-isolate-scope" my-tab-view=""
+                 ng-if="specialOfferTips" data-tips="specialOfferTips" data-type="1"
+                 data-selected="&#39;specialOffer&#39;">
+                <div class="cr-title" data-ys="0">
+                    <ul class="fn-tab-nav fn-fl">
+                        <li class="ng-scope"><a class="ng-binding titleon">为您推荐</a></li>
+                    </ul>
+                </div>
+                <div class="cr-list-out ng-isolate-scope" data-is-show="true" data-type="1"
+                     data-index="tabData.listIndex" data-show-close-btn="false" data-extra-class="">
+                    <div class="cr-list fixed">
+                        <div class="slide-wrapper ng-scope" ng-switch-default="" style="font-size:12px">
+                            <ul ng-repeat="list in itemList" ng-show="index == $index" class="ng-scope">
+                                <li ng-repeat="item in list" class="ng-scope">
+                                    <a href="239.html"><img ng-src="../pics/goods_thumb_239_80_80.jpeg" alt="初二数学提高班"
+                                                            src="../pics/goods_thumb_239_80_80.jpeg"></a>
+                                    <p><a class="ng-binding" href="239.html">初二数学提高班</a></p>
+                                    <div class="div-01">
+                                        <em>¥</em>
+                                        <span class="ng-binding">1000.00</span>
+                                    </div>
+                                    <button class="btn add2cart" ng-click="addGood(item)" type="button"
+                                            onclick="javascript:AjaxAddCart(239,1,0);">加入购物车
+                                    </button>
+                                </li>
+                                <li ng-repeat="item in list" class="ng-scope">
+                                    <a href="242.html"><img ng-src="../pics/goods_thumb_242_80_80.jpeg" alt="初中全科1V1定制"
+                                                            src="../pics/goods_thumb_242_80_80.jpeg"></a>
+                                    <p><a class="ng-binding" href="242.html">初中全科1V1定制</a></p>
+                                    <div class="div-01">
+                                        <em>¥</em>
+                                        <span class="ng-binding">1000.00</span>
+                                    </div>
+                                    <button class="btn add2cart" ng-click="addGood(item)" type="button"
+                                            onclick="javascript:AjaxAddCart(242,1,0);">加入购物车
+                                    </button>
+                                </li>
+                                <li ng-repeat="item in list" class="ng-scope">
+                                    <a href="245.html"><img ng-src="../pics/goods_thumb_245_80_80.jpeg" alt="初三物理"
+                                                            src="../pics/goods_thumb_245_80_80.jpeg"></a>
+                                    <p><a class="ng-binding" href="245.html">初三物理</a></p>
+                                    <div class="div-01">
+                                        <em>¥</em>
+                                        <span class="ng-binding">2600.00</span>
+                                    </div>
+                                    <button class="btn add2cart" ng-click="addGood(item)" type="button"
+                                            onclick="javascript:AjaxAddCart(245,1,0);">加入购物车
+                                    </button>
+                                </li>
+                                <li ng-repeat="item in list" class="ng-scope">
+                                    <a href="256.html"><img ng-src="../pics/goods_thumb_256_80_80.jpeg" alt="寒假专项突击班"
+                                                            src="../pics/goods_thumb_256_80_80.jpeg"></a>
+                                    <p><a class="ng-binding" href="256.html">寒假专项突击班</a></p>
+                                    <div class="div-01">
+                                        <em>¥</em>
+                                        <span class="ng-binding">840.00</span>
+                                    </div>
+                                    <button class="btn add2cart" ng-click="addGood(item)" type="button"
+                                            onclick="javascript:AjaxAddCart(256,1,0);">加入购物车
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--footer-s-->
+    <!--<div class="footer p">-->
+        <!--<link rel="stylesheet" href="../css/kefu.css">-->
+        <!--<div class="cndns-right">-->
+
+            <!--<div class="cndns-right-meau meau-sev">-->
+                <!--<a href="javascript:" class="cndns-right-btn">-->
+                    <!--<span class="demo-icon">&#xe901;</span>-->
+                    <!--<p>-->
+                        <!--在线<br/>-->
+                        <!--客服-->
+                    <!--</p>-->
+                <!--</a>-->
+                <!--<div class="cndns-right-box">-->
+                    <!--<div class="box-border">-->
+                        <!--<div class="sev-t">-->
+                            <!--<span class="demo-icon">&#xe901;</span>-->
+                            <!--<p>在线客服<i>服务时间：9:00-24:00</i></p>-->
+                            <!--<div class="clear"></div>-->
+                        <!--</div>-->
+                        <!--<div class="sev-b">-->
+                            <!--<h4>学海教育在线沟通：</h4>-->
+                            <!--<ul id="zixunUl">-->
+                                <!--<li><a href="tencent://message/?uin=815750777&amp;Site=学海教育&amp;Menu=yes">学海教育客服</a>-->
+                                <!--</li>-->
+
+                                <!--<li><a href="tencent://message/?uin=815750777&amp;Site=学海教育&amp;Menu=yes">学海教育客服</a>-->
+                                <!--</li>-->
+                                <!--<li><a href="tencent://message/?uin=815750777&amp;Site=学海教育&amp;Menu=yes">学海教育客服</a>-->
+                                <!--</li>-->
+
+                                <!--<div class="clear"></div>-->
+                            <!--</ul>-->
+                        <!--</div>-->
+                        <!--<span class="arrow-right-kf"></span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="cndns-right-meau meau-contact">-->
+                <!--<a href="javascript:" class="cndns-right-btn">-->
+                    <!--<span class="demo-icon">&#xe902;</span>-->
+                    <!--<p>-->
+                        <!--客服<br/>-->
+                        <!--热线-->
+                    <!--</p>-->
+                <!--</a>-->
+                <!--<div class="cndns-right-box">-->
+                    <!--<div class="box-border">-->
+                        <!--<div class="sev-t">-->
+                            <!--<span class="demo-icon">&#xe902;</span>-->
+                            <!--<p>0531-81768062<br/><i>7*24小时客服服务热线</i></p>-->
+                            <!--<div class="clear"></div>-->
+                        <!--</div>-->
+                        <!--<span class="arrow-right-kf"></span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="cndns-right-meau meau-code">-->
+                <!--<a href="javascript:" class="cndns-right-btn">-->
+                    <!--<span class="demo-icon">&#xe903;</span>-->
+                    <!--<p>-->
+                        <!--关注<br/>-->
+                        <!--微信-->
+                    <!--</p>-->
+                <!--</a>-->
+                <!--<div class="cndns-right-box">-->
+                    <!--<div class="box-border">-->
+                        <!--<div class="sev-t">-->
+                            <!--<img src="../pics/5db61c1f81444cf505e797939e3a7e4e.gif" width="150" height="150"/>-->
+                            <!--<i>关注官方微信</i>-->
+                        <!--</div>-->
+                        <!--<span class="arrow-right-kf"></span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="cndns-right-meau meau-top" id="top-back">-->
+                <!--<a href="javascript:" class="cndns-right-btn" onclick="topBack()">-->
+                    <!--<span class="demo-icon">&#xe904;</span>-->
+                    <!--<i>顶部</i>-->
+                <!--</a>-->
+            <!--</div>-->
+
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+        <!--<script type="text/javascript">-->
+            <!--//置顶图标显示-->
+            <!--$('#top-back').hide()-->
+            <!--$(window).scroll(function () {-->
+                <!--if ($(this).scrollTop() > 350) {-->
+                    <!--$("#top-back").fadeIn();-->
+                <!--}-->
+                <!--else {-->
+                    <!--$("#top-back").fadeOut();-->
+                <!--}-->
+            <!--})-->
+
+            <!--//置顶事件-->
+            <!--function topBack() {-->
+                <!--$('body,html').animate({scrollTop: 0}, 300);-->
+            <!--}-->
+        <!--</script>-->
+
+        <!--<iframe src="footer.html" frameborder="0" height="319px" width="100%" scrolling="no"></iframe>-->
+        <!--&lt;!&ndash;web footer end&ndash;&gt;-->
+        <!--<script>-->
+
+            <!--$(document).ready(function () {-->
+                <!--ajax_cart_list(); // ajax 请求获取购物车列表-->
+            <!--});-->
+
+            <!--// ajax 提交购物车-->
+            <!--var before_request = 1; // 上一次请求是否已经有返回来, 有才可以进行下一次请求-->
+            <!--function ajax_cart_list() {-->
+
+                <!--if (before_request == 0) // 上一次请求没回来 不进行下一次请求-->
+                    <!--return false;-->
+                <!--before_request = 0;-->
+
+
+                <!--$.ajax({-->
+                    <!--type: "POST",-->
+                    <!--url: "ajaxCartList.html",//+tab,-->
+                    <!--data: $('#cart_form').serialize(),// 你的formid-->
+                    <!--success: function (data) {-->
+                        <!--$("#ajax_return").empty().append(data);-->
+                        <!--before_request = 1;-->
+                    <!--}-->
+                <!--});-->
+            <!--}-->
+
+            <!--/**-->
+             <!--* 购买商品数量加加减减-->
+             <!--* 购买数量 , 购物车id , 库存数量-->
+             <!--*/-->
+            <!--function switch_num(num, cart_id, store_count) {-->
+                <!--var num2 = parseInt($("input[name='goods_num[" + cart_id + "]']").val());-->
+                <!--num2 += num;-->
+                <!--if (num2 < 1) num2 = 1; // 保证购买数量不能少于 1-->
+                <!--if (num2 > store_count) {-->
+                    <!--layer.alert("库存只有 " + store_count + " 件, 你只能买 " + store_count + " 件", {icon: 2});-->
+                    <!--num2 = store_count; // 保证购买数量不能多余库存数量-->
+                <!--}-->
+
+                <!--$("input[name='goods_num[" + cart_id + "]']").val(num2);-->
+
+                <!--ajax_cart_list(); // ajax 更新商品价格 和数量-->
+            <!--}-->
+
+
+            <!--/**  全选 反选 **/-->
+            <!--function check_all() {-->
+                <!--var vt = $("#select_all").is(':checked');-->
+                <!--$("input[name^='cart_select']").prop('checked', vt);-->
+                <!--// var checked = !$('#select_all').attr('checked');-->
+                <!--// $("input[name^='cart_select']").attr("checked",!checked);-->
+                <!--ajax_cart_list(); // ajax 更新商品价格 和数量-->
+            <!--}-->
+
+            <!--var isdel = 1;-->
+
+            <!--// ajax 删除购物车的商品-->
+            <!--function ajax_del_cart(ids) {-->
+                <!--layer.confirm('您确定要删除吗', {-->
+                    <!--btn: ['确定', '取消']-->
+                <!--}, function () {-->
+                    <!--$.ajax({-->
+                        <!--type: "POST",-->
+                        <!--url: "ajaxDelCart.html",//+tab,-->
+                        <!--data: {ids: ids}, //-->
+                        <!--dataType: 'json',-->
+                        <!--success: function (data) {-->
+                            <!--layer.closeAll();-->
+                            <!--if (data.status == 1) {-->
+                                <!--$('.fn-delete-alert').show();-->
+                                <!--$('.fn-delete-alert').find('.ng-binding').html(isdel);-->
+                                <!--isdel++;-->
+                                <!--ajax_cart_list(); // ajax 请求获取购物车列表-->
+                                <!--layer.msg(data.msg, {icon: 1});-->
+                            <!--} else {-->
+                                <!--layer.msg(data.msg, {icon: 1});-->
+                            <!--}-->
+                        <!--}-->
+                    <!--});-->
+                <!--})-->
+
+            <!--}-->
+
+            <!--// 批量删除购物车的商品-->
+            <!--function del_cart_more() {-->
+<!--//            if(!confirm('确定要删除吗?'))-->
+<!--//                return false;-->
+                <!--// 循环获取复选框选中的值-->
+                <!--var chk_value = [];-->
+                <!--$('input[name^="cart_select"]:checked').each(function () {-->
+                    <!--var s_name = $(this).attr('name');-->
+                    <!--var id = s_name.replace('cart_select[', '').replace(']', '');-->
+                    <!--chk_value.push(id);-->
+                <!--});-->
+                <!--// ajax  调用删除-->
+                <!--if (chk_value.length > 0)-->
+                    <!--ajax_del_cart(chk_value.join(','));-->
+            <!--}-->
+
+            <!--$('.gwc-qjs').click(function () {-->
+                <!--var user_id = '';-->
+                <!--if (user_id == '0') {-->
+                    <!--layer.open({-->
+                        <!--type: 2,-->
+                        <!--title: '<b>登录学海教育</b>',-->
+                        <!--skin: 'layui-layer-rim',-->
+                        <!--shadeClose: true,-->
+                        <!--shade: 0.5,-->
+                        <!--area: ['490px', '460px'],-->
+                        <!--content: "pop_login.html",-->
+                    <!--});-->
+                <!--} else {-->
+                    <!--window.location.href = $(this).attr('data-url');-->
+                <!--}-->
+            <!--})-->
+        <!--</script>-->
+        <!--<script src="../js/jqAlert.min.js"></script>-->
+        <!--<script>-->
+            <!--$(function () {-->
+                <!--$.ajax({-->
+                    <!--type: 'post',-->
+                    <!--url: '/islogin',-->
+                    <!--//data : {"username":username,"password":password},-->
+                    <!--dataType: 'json',-->
+                    <!--success: function (res) {-->
+                        <!--var res = eval(res);-->
+                        <!--if (res.result == 'success') {-->
+                            <!--//jqAlert.Confirm('已登录');-->
+                            <!--$("#name").empty().append(res.user.username);-->
+                        <!--} else {-->
+                            <!--//jqAlert.Confirm('未登录');-->
+                        <!--}-->
+                    <!--}-->
+
+                <!--});-->
+            <!--})-->
+        <!--</script>-->
+
+
+    <!--web footer start-->
+    <div class="w-all w-minw bg-c-e3e3e3 p-t-15 ovhidden">
+        <!--link start-->
+        <div class="w-main m-auto">
+            <div class="fl w-65 fs-12 ftc-414141 line-h30 ft-w-b">友情链接：</div>
+            <div class="fr">
+                <ul class="ql_link">
+                    <li><a href="#">决胜教育网</a></li>
+                    <li><a href="#">优米网</a></li>
+                    <li><a href="#">八维教育</a></li>
+                    <li><a href="#">雅思培训</a></li>
+                    <li><a href="#">中国夏令营</a></li>
+                    <li><a href="#">英语口语培训</a></li>
+                    <li><a href="#">英语培训</a></li>
+                    <li><a href="#">高考试题库</a></li>
+                    <li><a href="#">留学监理网</a></li>
+                    <li><a href="#">上海雅思培训</a></li>
+                    <li><a href="#">幼儿英语培训</a></li>
+                    <li><a href="#">广州机构总汇</a></li>
+                    <li><a href="#">吉林教育信息网</a></li>
+                    <li><a href="#">少儿英语外教</a></li>
+                    <li><a href="#">在职研究生</a></li>
+                    <li><a href="#">一级建造师</a></li>
+                    <li><a href="#">创客教育</a></li>
+                    <li><a href="#">百科知识</a></li>
+                    <li><a href="#">新航道</a></li>
+                    <li><a href="#">顺顺留学</a></li>
+                    <li><a href="#">国际学校</a></li>
+                    <li><a href="#">成人高考</a></li>
+                    <div class="clear"></div>
+                </ul>
+            </div>
+        </div>
+        <!--link end-->
+        <!--分割线 start-->
+        <div class="w-main m-auto">
+            <div class="w-main fl hg-12"></div>
+            <div class="w-main fl hg-1 bg-c-d2d2d2"></div>
+            <div class="w-main fl hg-24"></div>
+        </div>
+        <!--分割线 start-->
+        <div class="w-main m-auto m-b-23 ovhidden">
+            <div class="m-t-12 fl"> <a href="index.html" class="m-t-25 fl"><img src="../pics/footer_logo.png" width="235" height="70" alt=""/></a>
+                <div class="qlfooter_nav m-l-45 fl">
+                    <dl class="ql_f_nav fl">
+                        <dt><a href="#">关于我们</a></dt>
+                        <dd><a href="#"><i></i>齐峰介绍</a></dd>
+                        <dd><a href="#"><i></i>加盟齐峰</a></dd>
+                        <dd><a href="#"><i></i>帮助中心</a></dd>
+                        <dd><a href="#"><i></i>comeperson</a></dd>
+                    </dl>
+                    <dl class="ql_f_nav ql_f_navzp fl">
+                        <dt><a href="#">课程分类</a></dt>
+                        <dd><a href="#"><i></i>小学阶段</a></dd>
+                        <dd><a href="#"><i></i>初中阶段</a></dd>
+                        <dd><a href="#"><i></i>高中阶段</a></dd>
+                        <dd><a href="#"><i></i>家庭教育</a></dd>
+                    </dl>
+                    <div class="ql_f_infp w-200 m-l-15 fl">
+                        <h3>connectus</a></h3>
+                        <p><i></i>电话：0531-81768062</p>
+                        <p><i></i>邮箱：qifengedu@yeah.net</p>
+                    </div>
+                </div>
+            </div>
+            <div class="w-244 fr">
+                <div class="w-112 m-l-10 fl"> <img src="../pics/f_ewm1.gif" width="112" height="112" alt=""/>
+                    <p class="w-all fs-12 ftc-000000 text-c line-h25 fl">手机端</p>
+                </div>
+                <div class="w-112 m-l-10 fl"> <img src="../pics/f_ewm1.gif" width="112" height="112" alt=""/>
+                    <p class="w-all fs-12 ftc-000000 text-c line-h25 fl">手机端</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--web footer copyright start-->
+    <div class="w-all w-minw bg-c-cccccc p-t-6 p-b-6 ovhidden">
+        <div class="w-main m-auto text-c fs-12 ftc-414141 line-24"> Copyright 2010-2017     鲁ICP备88888888号-1（济南齐峰教育咨询有限公司） <br/>
+            公司地址：济南市市中区社会组织创新园307（二环南路6086号） </div>
+    </div>
+    <!--web footer copyright end-->
+
+    <!--web footer end-->
+    <script>
+        $(document).ready(function(){
+            var w = parseInt(($(window).width()-1200)/2);
+            $(".qlban_ad").css("right",w)
+        });
+
+    </script>
+
+</div>
+</body>
+</html>

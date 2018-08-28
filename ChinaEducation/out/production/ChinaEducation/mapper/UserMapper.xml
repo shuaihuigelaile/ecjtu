@@ -1,0 +1,44 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.UserMapper">
+    <!-- List<User>getUsers(); -->
+    <select id="getUsers" resultType="entity.User">
+select * from t_user;
+</select>
+    <!-- int deleteUserById(Integer id) -->
+    <delete id="deleteUserById" parameterType="int">
+delete  from t_user where id=#{id}
+</delete>
+    <!-- int updateUser(User user) -->
+    <update id="updateUser" parameterType="entity.User">
+update t_user set username=#{username},password=#{password},gender=#{gender},header=#{header},
+phone=#{phone},education=#{education},college_name=#{college_name},title=#{title},sign=#{sign},
+province=#{province},city=#{city},weight=#{weight} where id=#{id}
+</update>
+    <!-- User getUserById(Integer id); -->
+    <select id="getUserById" parameterType="int" resultType="entity.User">
+select * from t_user where id=#{id}
+</select>
+    <!--插入注册-->
+    <insert id="addUser" parameterType="entity.User">
+        insert into t_user(username,password) values(#{username},#{password})
+    </insert>
+    <!--实现登录-->
+    <select id="findUserByNameAndPwd" parameterType="java.lang.String" resultType="entity.User">
+        select username,password from t_user where username=#{username} and password=#{password}
+    </select>
+    <!--//获取所有的users-->
+    <select id="findAllUsers" resultType="entity.User">
+        select * from t_user
+    </select>
+
+    <!--根据用户id删除对应的用户-->
+    <delete id="deleteUserByUserId" parameterType="java.lang.Integer">
+        delete from t_user where id=#{id}
+    </delete>
+
+    <insert id="addAdminUser" parameterType="entity.User">
+        insert into t_user(username,password,gender,phone,email) values(#{username},#{password},#{gender},#{phone},#{email})
+    </insert>
+</mapper>

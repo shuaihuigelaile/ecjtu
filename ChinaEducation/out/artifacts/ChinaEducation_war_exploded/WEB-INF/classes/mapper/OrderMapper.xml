@@ -1,0 +1,18 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="dao.OrderMapper">
+    <insert id="orderMapper" parameterType="entity.Order">
+        insert into t_order(orderId,receiver,money,orderStaus,payStaus,sendGoodStaus,payWay,sendWay,buyTime) values(#{orderId},#{receiver},#{money},#{orderStaus},#{payStaus},#{sendGoodStaus},#{payWay},#{sendWay},#{buyTime})
+    </insert>
+
+    <!--查询所有订单-->
+    <select id="queryAllOrder" resultType="entity.Order">
+        select * from t_order
+    </select>
+
+    <!--删除特有的订单-->
+    <delete id="deleteOrder" parameterType="java.lang.Integer">
+        delete from t_order where orderId=#{orderId}
+    </delete>
+</mapper>

@@ -1,0 +1,361 @@
+/*--A Design by W3layouts 
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+--*/
+
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,dl,dt,dd,ol,nav ul,nav li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {display: block;}
+ol,ul{list-style:none;margin:0px;padding:0px;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}
+table{border-collapse:collapse;border-spacing:0;}
+/* start editing from here */
+a{text-decoration:none;}
+.txt-rt{text-align:right;}/* text align right */
+.txt-lt{text-align:left;}/* text align left */
+.txt-center{text-align:center;}/* text align center */
+.float-rt{float:right;}/* float right */
+.float-lt{float:left;}/* float left */
+.clear{clear:both;}/* clear float */
+.pos-relative{position:relative;}/* Position Relative */
+.pos-absolute{position:absolute;}/* Position Absolute */
+.vertical-base{	vertical-align:baseline;}/* vertical align baseline */
+.vertical-top{	vertical-align:top;}/* vertical align top */
+nav.vertical ul li{	display:block;}/* vertical menu */
+nav.horizontal ul li{	display: inline-block;}/* horizontal menu */
+img{max-width:100%;}
+/*end reset*/
+
+body {
+	background:url(../images/1.jpg) no-repeat;
+	background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-attachment: fixed;
+	background-position: center;
+	height: 100vh;
+	font-family: 'Hind Siliguri', sans-serif;
+}
+h1.w3layouts {
+    text-align: center;
+	font-size: 4.2em;
+    color: #fff;
+    margin: 37px 0;
+    font-family: 'Tangerine', cursive;
+    letter-spacing: 2px;
+    float: right;
+    width: 52%;
+	font-weight: bold;
+	text-shadow: 1px 1px 11px rgba(12, 12, 12, 0.75);
+}
+/*-- form --*/
+.content-w3ls {
+    width: 41%;
+    background-color: rgba(0, 0, 0, 0.71);
+    float: right;
+    margin-right: 5em;
+}
+.agileits-left, .section_class_agileits {
+    margin-bottom: 17px;
+}
+.agile_form input[type=text], .agile_form input[type=password], .agile_form input[type=email], .section_class_agileits select{
+    padding: 10px;
+    color: #5d5c5c;
+    font-size: .9em;
+    outline: none;
+    border: none;
+    background: #fff;
+    width: 95%;
+    font-family: 'Hind Siliguri', sans-serif;
+    letter-spacing: 1px;
+    border: 3px double #03A9F4;
+    border-radius: 4px;
+}
+.section_class_agileits select{
+	width:100%;
+}
+.date {
+    cursor: pointer;
+}
+.form_w3layouts {
+    padding: 3em 2em;
+}
+.submit-w3l input[type=submit] {
+    color: #fff;
+    padding: 10px 50px;
+    font-size: 1em;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border: none;
+    background: #03A9F4;
+    outline: none;
+    margin: 1.5em 0 0;
+    border: none;
+    font-family: 'Hind Siliguri', sans-serif;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    text-align: center;
+}
+.submit-w3l input[type=submit]:hover {
+    background: #fff;
+    color: #000;
+}
+/*-- //form --*/
+/*-- copyright --*/
+h2.copyright-agileits {
+    font-size: 1em;
+    color: #fff;
+    letter-spacing: 2px;
+    padding: 2em;
+    float: right;
+    width: 44%;
+}
+h2.copyright-agileits a {
+	color:#03A9F4;
+	transition:all 0.7s ease-in-out;
+	-webkit-transition:all 0.5s ease-in-out;
+	-moz-transition:all 0.5s ease-in-out;
+	-o-transition:all 0.5s ease-in-out;
+	-ms-transition:all 0.5s ease-in-out;
+}
+h2.copyright-agileits a:hover {
+	color:#fff;
+	transition:all 0.7s ease-in-out;
+	-webkit-transition:all 0.5s ease-in-out;
+	-moz-transition:all 0.5s ease-in-out;
+	-o-transition:all 0.5s ease-in-out;
+	-ms-transition:all 0.5s ease-in-out;
+}
+/*-- copyright --*/
+
+/*--responsive--*/
+@media(max-width: 1440px){
+	h2.copyright-agileits {
+		width: 48%;
+	}
+	.content-w3ls {
+		width: 43%;
+	}
+	h1.w3layouts {
+		width: 54%;
+	}
+}
+@media(max-width: 1366px){
+	h1.w3layouts {
+		width: 56%;
+		margin: 28px 0;
+		font-size: 4em;
+	}
+	h2.copyright-agileits {
+		width: 50%;
+	}
+}
+@media(max-width: 1280px){
+	.agile_form input[type=text], .agile_form input[type=email]{
+		width: 94.5%;
+	}
+	h2.copyright-agileits {
+		width: 53%;
+	}
+}
+@media(max-width: 1080px){
+	.content-w3ls {
+		width: 50%;
+		margin-right: 3em;
+	}
+	h1.w3layouts {
+		width: 60%;
+		font-size: 3.7em;
+	}
+	h2.copyright-agileits {
+		width: 56%;
+		letter-spacing: 1px;
+	}
+}
+@media(max-width: 1050px){
+	.content-w3ls {
+		width: 54%;
+		margin-right: 2em;
+	}
+	h1.w3layouts {
+		width: 61%;
+	}
+	h2.copyright-agileits {
+		width: 57%;
+	}
+}
+@media(max-width: 1024px){
+	h2.copyright-agileits {
+		width: 59%;
+	}
+}
+@media(max-width: 991px){
+	h2.copyright-agileits {
+		width: 61%;
+	}
+	.content-w3ls {
+		width: 56%;
+	}
+}
+@media(max-width: 900px){
+	h1.w3layouts {
+		width: 66%;
+		font-size: 3.4em;
+		margin: 23px 0;
+	}
+	.content-w3ls {
+		width: 58%;
+	}
+	.agile_form input[type=text], .agile_form input[type=email] {
+		width: 94%;
+	}
+	h2.copyright-agileits {
+		width: 67%;
+	}
+}
+@media(max-width: 800px){
+	h1.w3layouts {
+		width: 100%;
+	}
+	.content-w3ls {
+		width: 68%;
+		float: none;
+		margin: 0 auto;
+	}
+	h2.copyright-agileits {
+		width: 100%;
+		float: none;
+		padding: 2em 0;
+		text-align: center;
+	}
+	.agile_form input[type=text], .agile_form input[type=email] {
+		width: 94.5%;
+	}
+}
+@media(max-width: 768px){
+
+}
+@media(max-width: 736px){
+	.content-w3ls {
+		width: 72%;
+	}
+}
+@media(max-width: 667px){
+	.content-w3ls {
+		width: 81%;
+	}
+}
+@media(max-width: 640px){
+	.agile_form input[type=text], .agile_form input[type=email] {
+		width: 94%;
+	}
+}
+@media(max-width: 600px){
+	.content-w3ls {
+		width: 86%;
+	}
+	h2.copyright-agileits {
+		font-size: .95em;
+	}
+}
+@media(max-width: 568px){
+	h1.w3layouts {
+		font-size: 3.2em;
+		margin: 18px 0;
+	}
+	.submit-w3l input[type=submit] {
+		padding: 9px 40px;
+		margin: 1em 0 0;
+	}
+	.agile_form input[type=text], .agile_form input[type=email], .section_class_agileits select {
+		padding: 9px 10px;
+	}
+	.agile_form input[type=text], .agile_form input[type=email] {
+		width: 93.5%;
+	}
+}
+@media(max-width: 480px){
+	h1.w3layouts {
+		font-size: 3em;
+	}
+	.content-w3ls {
+		width: 93%;
+	}
+	h2.copyright-agileits {
+		width: 94%;
+		margin: 0 auto;
+	}
+	.agile_form input[type=text], .agile_form input[type=email] {
+		width: 93%;
+	}
+}
+@media(max-width: 414px){
+	h1.w3layouts {
+		font-size: 2.8em;
+		letter-spacing: 1px;
+	}
+	.form_w3layouts {
+		padding: 2em 2em;
+	}
+	.agile_form input[type=text], .agile_form input[type=email] {
+		width: 91.5%;
+	}
+	.submit-w3l input[type=submit] {
+		padding: 9px 35px;
+		font-size: .9em;
+	}
+	h2.copyright-agileits {
+		font-size: .9em;
+		width: 96%;
+		padding: 1.5em 0;
+	}
+}
+@media(max-width: 384px){
+	h1.w3layouts {
+		font-size: 2.6em;
+	}
+	.agile_form input[type=text], .agile_form input[type=email] {
+		width: 90.5%;
+	}
+}
+@media(max-width: 375px){
+	.agile_form input[type=text], .agile_form input[type=email] {
+		width: 90%;
+	}
+}
+@media(max-width: 320px){
+	h1.w3layouts {
+		font-size: 2.2em;
+		margin: 14px 0;
+	}
+	.form_w3layouts {
+		padding: 1.5em 1em;
+	}
+	.agile_form input[type=text], .agile_form input[type=email], .section_class_agileits select {
+		font-size: .8em;
+	}
+	.agile_form input[type=text], .agile_form input[type=email] {
+		width: 89.5%;
+	}
+	.submit-w3l input[type=submit] {
+		padding: 9px 32px;
+		font-size: .85em;
+		margin: .5em 0 0;
+	}
+	h2.copyright-agileits {
+		font-size: .8em;
+		line-height: 1.9;
+	}
+	.content-w3ls {
+		width: 95%;
+	}
+}
+
+/*--//responsive--*/

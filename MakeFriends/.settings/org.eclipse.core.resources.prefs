@@ -1,8 +1,0 @@
-eclipse.preferences.version=1
-encoding//WebRoot/view/index.jsp=UTF-8
-encoding//src/controller/EncodingFilterServlet.java=GBK
-encoding//src/controller/RegisterServlet.java=UTF-8
-encoding//src/controller/UploadServlet.java=GBK
-encoding//src/dao/impl/UserDaoImpl.java=UTF-8
-encoding//src/dao/impl/UserFactory.java=GBK
-encoding//src/util/C3P0Util.java=GBK
